@@ -17,10 +17,10 @@ const Navbar = ({ darkMode, toggleDarkMode, scrollY, windowHeight }) => {
 
   return (
     <div
-      className={`px-6 h-20 flex items-center justify-between w-full z-20 transition-all fixed ${
+      className={`px-6 h-16 flex items-center justify-between w-full z-20 transition-all fixed ${
         navbarFixed
-          ? "shadow-md backdrop-blur-md " +
-            (darkMode ? "dark-back-op" : "light-back-op shadow-gray-200")
+          ? "backdrop-blur " +
+            (darkMode ? "dark-back-op" : "light-back-op")
           : ""
       }`}
     >

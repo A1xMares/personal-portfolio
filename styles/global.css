@@ -34,11 +34,11 @@ p {
 }
 
 .dark-back-op {
-    background-color: rgba(41,39,64, .8);
+    background-color: rgba(41,39,64, .55);
 }
 
 .light-back-op {
-    background-color: rgba(255, 255, 255, .75);
+    background-color: rgba(237, 242, 242, .5);
 }
 
 .dark * p {
