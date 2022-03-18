@@ -4,12 +4,12 @@ import Subtitle from "../shared/subtitle";
 const Work = ({ darkMode, showedArea }) => {
   return (
     <section id="experience" className="pt-28 -mt-28">
-      <div className="flex items-center mb-6 pr-2">
+      <div className="flex items-center mb-6">
         <AnimationSequence showedArea={showedArea}>
           <Subtitle
             showedArea={showedArea}
             preffix={"03."}
-            text={"Some of my work"}
+            text={"Work I've done"}
           />
         </AnimationSequence>
       </div>

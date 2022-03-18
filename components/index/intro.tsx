@@ -1,5 +1,7 @@
 import BtnPrimary from "../../components/shared/btn-primary";
 import Image from "next/image";
+import Link from "next/link";
+import { ChevronDownIcon } from "@heroicons/react/solid";
 
 const Intro = ({ darkMode }) => {
   return (
@@ -31,7 +33,6 @@ const Intro = ({ darkMode }) => {
               className="transition-opacity	opacity-70 hover:opacity-100 duration-500"
             />
           </a>
-          
         </button>
         <button className="flex justify-center p-2">
           <a href="https://github.com/A1xMares" target="_blank" rel="noreferrer">
@@ -44,6 +45,16 @@ const Intro = ({ darkMode }) => {
             />
           </a>
         </button>
+      </div>
+      {/* Scroll indicator */}
+      <div className="absolute left-0 right-0 flex justify-center bottom-4">
+          <Link href="#about" passHref>
+            <ChevronDownIcon
+              className={`h-14 cursor-pointer transition-opacity opacity-30 animate-bounce p-2 ${
+                darkMode ? "text-white" : "text-black"
+              }`}
+            />
+          </Link>
       </div>
     </section>
   );

@@ -4,7 +4,7 @@ import Subtitle from "../shared/subtitle";
 const Experience = ({ darkMode, showedArea }) => {
   return (
     <section id="experience" className="pt-28 -mt-28">
-      <div className="flex items-center mb-6 pr-2">
+      <div className="flex items-center mb-6">
         <AnimationSequence showedArea={showedArea}>
           <Subtitle
             showedArea={showedArea}

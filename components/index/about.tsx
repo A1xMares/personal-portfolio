@@ -8,7 +8,7 @@ const About = ({ darkMode, showedArea }) => {
 
   return (
     <section id="about" className="pt-28 -mt-28">
-      <div className="flex items-center mb-6 pr-2">
+      <div className="flex items-center mb-6">
         <AnimationSequence showedArea={showedArea}>
           <Subtitle showedArea={showedArea} preffix={'01.'} text={'About me'} />
         </AnimationSequence>
