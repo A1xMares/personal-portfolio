@@ -32,22 +32,22 @@ const Navbar = ({ darkMode, toggleDarkMode, scrollY, windowHeight }) => {
       <div className="flex items-center">
         {/* Desktop nav options*/}
         <div className="items-center hidden lg:flex fadeIn">
-          <Link href="#about" passHref>
+          <Link href="#about" passHref aria-label="About section">
             <h2 className="text-lg font-bold cursor-pointer">
               <span className="accent-1 text-sm">01. </span>About 
             </h2>
           </Link>
-          <Link href="#experience" passHref>
+          <Link href="#experience" passHref aria-label="Experience section">
             <h2 className="text-lg font-bold cursor-pointer ml-6">
               <span className="accent-1 text-sm">02. </span>Experience
             </h2>
           </Link>
-          <Link href="#work" passHref>
+          <Link href="#work" passHref aria-label="Work section">
             <h2 className="text-lg font-bold cursor-pointer ml-6">
               <span className="accent-1 text-sm">03. </span>My work
             </h2>
           </Link>
-          <Link href="#contact" passHref>
+          <Link href="#contact" passHref aria-label="Contact section">
             <h2 className="text-lg font-bold cursor-pointer ml-6">
               <span className="accent-1 text-sm">04. </span>Contact
             </h2>

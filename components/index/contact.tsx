@@ -29,6 +29,7 @@ const Contact = ({ darkMode, showedArea }) => {
               href="mailto:aljorc16@gmail.com?subject=Hello"
               target="_blank"
               rel="noreferrer"
+              aria-label="Email me"
             >
               <BtnPrimary darkMode={darkMode} className="w-36">
                 Email Me

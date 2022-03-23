@@ -1,11 +1,10 @@
 import BtnPrimary from "../../components/shared/btn-primary";
-import Image from "next/image";
 import Link from "next/link";
 import { ChevronDownIcon } from "@heroicons/react/solid";
-import linkedin from "../../public/svgs/linkedin.svg";
-import linkedinWhite from "../../public/svgs/linkedin-white.svg";
-import github from "../../public/svgs/github.svg";
-import githubWhite from "../../public/svgs/github-white.svg";
+const linkedin = '/svgs/linkedin.svg'
+const linkedinWhite = '/svgs/linkedin-white.svg'
+const github = '/svgs/github.svg'
+const githubWhite = '/svgs/github-white.svg'
 
 const Intro = ({ darkMode }) => {
   return (
@@ -26,7 +25,7 @@ const Intro = ({ darkMode }) => {
       </h3>
       {/* Buttons row */}
       <div className="flex items-center fadeInBottom delay-3 relative">
-        <Link href="#work" passHref>
+        <Link href="#work" passHref aria-label="Work section">
           <div>
             <BtnPrimary darkMode={darkMode} className="">
               Check out my work
@@ -37,9 +36,10 @@ const Intro = ({ darkMode }) => {
           <a
             href="https://www.linkedin.com/in/alejandro-mares/"
             target="_blank"
+            aria-label="Go to linkedin"
             rel="noreferrer"
           >
-            <Image
+            <img
               src={darkMode ? linkedinWhite : linkedin}
               alt="Linkedin logo"
               width={26}
@@ -52,9 +52,10 @@ const Intro = ({ darkMode }) => {
           <a
             href="https://github.com/A1xMares"
             target="_blank"
+            aria-label="Go to github"
             rel="noreferrer"
           >
-            <Image
+            <img
               src={darkMode ? githubWhite : github}
               alt="Github logo"
               width={24}
@@ -65,7 +66,7 @@ const Intro = ({ darkMode }) => {
         </button>
         {/* Scroll indicator */}
         <div className="absolute left-0 right-0 flex justify-center -bottom-40">
-          <Link href="#about" passHref>
+          <Link href="#about" passHref aria-label="About section">
             <ChevronDownIcon
               className={`h-14 cursor-pointer transition-opacity opacity-30 animate-bounce p-2 ${
                 darkMode ? "text-white" : "text-black"

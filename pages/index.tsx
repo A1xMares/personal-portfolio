@@ -31,7 +31,7 @@ function HomePage({ darkMode, showedArea, scrollY }) {
         <meta name="twitter:creator" content="@Alxmres" />
 
         <meta name="keywords" content="alejandro mares, alxmares, alx mares, web development, full stack, remote developer, angular developer, react developer" ></meta>
-        <link rel="shortcut icon" href="/favicon.ico" />
+        <link rel="shortcut icon" href="/favicon.ico"/>
       </Head>
       {/* Header */}
       <div className="px-6 h-screen pb-20 flex items-center w-100 m-auto max-w-sm sm:max-w-xl xl:max-w-2xl">

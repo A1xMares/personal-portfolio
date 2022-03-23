@@ -1,8 +1,6 @@
 import { useState } from "react";
 import AnimationSequence from "../helpers/animationSequence";
 import Subtitle from "../shared/subtitle";
-import Image from "next/image";
-import profilePic from "../../public/img/profile.jpg";
 import BtnPrimary from "../shared/btn-primary";
 
 const About = ({ darkMode, showedArea }) => {
@@ -179,8 +177,8 @@ const About = ({ darkMode, showedArea }) => {
           <div className="w-100 flex justify-center">
             <div className="w-36 mr-4 lg:mr-0 -mt-5 sm:mt-4 lg:ml-9 xl:w-44">
               <AnimationSequence showedArea={showedArea}>
-                <Image
-                  src={profilePic}
+                <img
+                  src="/img/profile-min.webp"
                   alt="Linkedin logo"
                   width={250}
                   height={250}
@@ -195,6 +193,7 @@ const About = ({ darkMode, showedArea }) => {
                 href="https://drive.google.com/file/d/1tusWA4O10eeyqRBZ_SZnxgLqBfQWadHR/view?usp=sharing"
                 target="_blank"
                 rel="noreferrer"
+                aria-label="Resume link"
               >
                 <BtnPrimary darkMode={darkMode} className="w-36 xl:w-44">
                   Resume

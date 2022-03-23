@@ -3,7 +3,7 @@ import { useEffect, useState, useRef } from "react";
 import Layout from "../components/layout";
 
 export default function App({ Component, pageProps }) {
-  const [darkMode, setDarkMode] = useState(null);
+  const [darkMode, setDarkMode] = useState(false);
   const [scrollY, setScrollY] = useState(0);
   const [windowHeight, setWindowHeight] = useState(0);
   const [showedArea, setShowedArea] = useState([0, 0]);
@@ -17,20 +17,9 @@ export default function App({ Component, pageProps }) {
     // Set resize listener
     handleResize();
     window.addEventListener("resize", handleResize);
-
-    // Manage darkmode
-    let tempDarkMode = JSON.parse(localStorage.getItem("darkMode"));
-    if (!tempDarkMode) return;
-    setDarkMode(tempDarkMode);
   }, []);
 
   useEffect(() => calculateArea(scrollY, windowHeight), [scrollY, windowHeight])
-
-  // Store user's darkmode preference in localStorage
-  useEffect(() => {
-    if (darkMode === null) return;
-    localStorage.setItem("darkMode", darkMode.toString());
-  }, [darkMode]);
 
   // Track scroll from top
   const handleScroll = () => {
@@ -49,7 +38,7 @@ export default function App({ Component, pageProps }) {
     setShowedArea([scrollY, height]);
   };
 
-  // Store user's darkmode preference in localStorage
+  // Change user's darkmode preference
   const toggleDarkMode = () => {
     setDarkMode(!darkMode);
   };

@@ -161,10 +161,37 @@ li::marker {
   list-style-image: url("/pngs/double-arrow-white.png") !important;
 }
 
-.card-bg-image {
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Do not repeat the image */
-  background-size: cover; /* Resize the background image to cover the entire container */
+.card-height {
+  height: 418px;
+}
+
+.card-img {
+  display: block;
+  width: 334px;
+  height: 191px;
+  object-fit: cover; /* or object-fit: contain; */
+}
+
+@media (min-width: 640px) {
+  .card-height {
+    height: 376px;
+  }
+  .card-img {
+    display: block;
+    width: 250px;
+    height: 143px;
+    object-fit: cover; /* or object-fit: contain; */
+  }
+}
+
+@media (min-width: 1280px) {
+  .card-height {
+    height: 405px;
+  }
+  .card-img {
+    width: 296px;
+    height: 175px;
+  }
 }
 
 /*

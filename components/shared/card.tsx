@@ -1,12 +1,12 @@
-import Image from "next/image";
-import github from "../../public/svgs/github.svg";
-import githubWhite from "../../public/svgs/github-white.svg";
 import {
   ExternalLinkIcon,
   ChevronLeftIcon,
   ChevronRightIcon,
 } from "@heroicons/react/solid";
 import { useState } from "react";
+
+const github = '/svgs/github.svg'
+const githubWhite = '/svgs/github-white.svg'
 
 const Card = ({ darkMode, project }) => {
   const [index, setIndex] = useState(0);
@@ -25,17 +25,17 @@ const Card = ({ darkMode, project }) => {
 
   return (
     <div
-      className={`transition-all h-108 w-full rounded-2xl border  hover:shadow-md overflow-hidden flex flex-col ${
+      className={`transition-all card-height w-full rounded-2xl border  hover:shadow-md overflow-hidden flex flex-col ${
         darkMode ? "dark-back-op " : "bg-gray-100 border-gray-200"
       }`}
     >
       {/* Image Galley */}
       <div
-        className={`h-44 card-bg-image relative ${
+        className={`h-48 sm:h-36 xl:h-44 relative ${
           darkMode ? "bg-gray-800" : "bg-gray-200"
         }`}
-        style={{ backgroundImage: "url(" + project.gallery[index] + ")" }}
       >
+        <img src={project.gallery[index]} alt={project.title} className="card-img"/>
         <div
           className={`absolute left-3 -bottom-3 rounded-full shadow ${
             darkMode ? "bg-slate-800 border border-gray-500" : "bg-white"
@@ -84,9 +84,10 @@ const Card = ({ darkMode, project }) => {
               href={project.githubLink}
               target="_blank"
               rel="noreferrer"
+              aria-label="Go to github"
               className="max-h-6 h-6 flex"
             >
-              <Image
+              <img
                 src={darkMode ? githubWhite : github}
                 alt="Github logo"
                 width={20}
@@ -95,9 +96,9 @@ const Card = ({ darkMode, project }) => {
             </a>
           )}
           {project.url !== "" && (
-            <a href={project.url} target="_blank" rel="noreferrer" aria-label={project.name}>
+            <a href={project.url} target="_blank" rel="noreferrer" aria-label={project.title}>
               <ExternalLinkIcon
-                aria-label={project.name}
+                aria-label={project.title}
                 className={`h-6 ml-2 cursor-pointer transition-opacity ${
                   darkMode ? "text-white" : "text-black"
                 }`}

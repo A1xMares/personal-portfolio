@@ -48,6 +48,7 @@ const Experience = ({ darkMode, showedArea }) => {
                   href="https://www.bosch.com/"
                   target="_blank"
                   rel="noreferrer"
+                  aria-label="Go to bosch"
                   className="accent-2 underline hover:underline-offset-2"
                 >
                   Bosch
@@ -134,6 +135,7 @@ const Experience = ({ darkMode, showedArea }) => {
                   href="https://adroitoverseas.com/"
                   target="_blank"
                   rel="noreferrer"
+                  aria-label="Go to adroit"
                   className="accent-2 underline hover:underline-offset-2"
                 >
                   Adroit
@@ -218,6 +220,7 @@ const Experience = ({ darkMode, showedArea }) => {
                   href="https://www.aleate.com/"
                   target="_blank"
                   rel="noreferrer"
+                  aria-label="Go to aleate"
                   className="accent-2 underline hover:underline-offset-2"
                 >
                   Aleate
@@ -260,6 +263,7 @@ const Experience = ({ darkMode, showedArea }) => {
                           href="https://www.aleate.com/"
                           target="_blank"
                           rel="noreferrer"
+                          aria-label="Go to aleate"
                           className="accent-2 underline hover:underline-offset-2"
                         >
                           View Project.
@@ -355,6 +359,7 @@ const Experience = ({ darkMode, showedArea }) => {
                           href="https://www.gridcompany.com.mx/"
                           target="_blank"
                           rel="noreferrer"
+                          aria-label="Go to grid"
                           className="accent-2 underline hover:underline-offset-2"
                         >
                           View Project.
@@ -375,6 +380,7 @@ const Experience = ({ darkMode, showedArea }) => {
                           href="https://integreat.com/es/inicio"
                           target="_blank"
                           rel="noreferrer"
+                          aria-label="Go to integreat"
                           className="accent-2 underline hover:underline-offset-2"
                         >
                           View Project.
