@@ -11,9 +11,7 @@ export default function App({ Component, pageProps }) {
   // Set event listeners and get default darkmode
   useEffect(() => {
     // Set scroll listener
-    handleScroll();
-    window.addEventListener("scroll", handleScroll);
-
+    handleScroll({});
     // Set resize listener
     handleResize();
     window.addEventListener("resize", handleResize);
@@ -22,8 +20,9 @@ export default function App({ Component, pageProps }) {
   useEffect(() => calculateArea(scrollY, windowHeight), [scrollY, windowHeight])
 
   // Track scroll from top
-  const handleScroll = () => {
-    setScrollY(window.scrollY);
+  const handleScroll = (e) => {
+    console.log(e);
+    setScrollY(e);
   };
 
   // Track resize event
@@ -49,6 +48,7 @@ export default function App({ Component, pageProps }) {
       toggleDarkMode={toggleDarkMode}
       scrollY={scrollY}
       windowHeight={windowHeight}
+      handleScroll={handleScroll}
     >
       <Component
         {...pageProps}

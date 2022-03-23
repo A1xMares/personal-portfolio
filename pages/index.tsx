@@ -13,7 +13,6 @@ function HomePage({ darkMode, showedArea, scrollY }) {
       {/* Metadata */}
       <Head>
         <title>AlxMares | Web Developer</title>
-
         <meta name="description" content="Alejandro Mares is a doftware developer specialized in Full Stack Web Development, having 3.5+ years of experience working in large projects."/>
         <meta property="og:title" content="AlxMares | Web Developer" key="title"/>
         <meta property="og:type" content="website"/>
@@ -31,7 +30,7 @@ function HomePage({ darkMode, showedArea, scrollY }) {
         <meta name="twitter:creator" content="@Alxmres" />
 
         <meta name="keywords" content="alejandro mares, alxmares, alx mares, web development, full stack, remote developer, angular developer, react developer" ></meta>
-        <link rel="shortcut icon" href="/favicon.ico"/>
+        <link rel="shortcut icon" href="/favicon.ico" />
       </Head>
       {/* Header */}
       <div className="px-6 h-screen pb-20 flex items-center w-100 m-auto max-w-sm sm:max-w-xl xl:max-w-2xl">
