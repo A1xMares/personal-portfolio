@@ -21,7 +21,6 @@ export default function App({ Component, pageProps }) {
 
   // Track scroll from top
   const handleScroll = (e) => {
-    console.log(e);
     setScrollY(e);
   };
 
