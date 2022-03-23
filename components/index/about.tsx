@@ -1,66 +1,219 @@
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
 import AnimationSequence from "../helpers/animationSequence";
 import Subtitle from "../shared/subtitle";
-import Portrait from "../three/Portrait";
+import Image from "next/image";
+import profilePic from "../../public/img/profile.jpg";
+import BtnPrimary from "../shared/btn-primary";
 
 const About = ({ darkMode, showedArea }) => {
   const [selectedTab, setSelectedTab] = useState(0);
 
   return (
-    <section id="about" className="pt-28 -mt-28">
+    <section id="about" className="pt-28 -mt-28 relative">
+      {/* About me subtitle */}
       <div className="flex items-center mb-6">
         <AnimationSequence showedArea={showedArea}>
-          <Subtitle showedArea={showedArea} preffix={'01.'} text={'About me'} />
+          <Subtitle showedArea={showedArea} preffix={"01."} text={"About me"} />
         </AnimationSequence>
       </div>
-
-      <div className="pl-8">
-        <AnimationSequence showedArea={showedArea}>
-          <div className="flex mb-4 items-end h-10">
-            <h3 className={`transition-all ${selectedTab === 0 ? 'text-3xl font-bold accent-2' : 'text-xl text-gray-500'}`} onClick={() => setSelectedTab(0)}> Profile </h3>
-            <h3 className={`ml-8 transition-all ${selectedTab === 1 ? 'text-3xl font-bold accent-2' : 'text-xl text-gray-500'}`} onClick={() => setSelectedTab(1)}> Skills </h3>
-          </div>
-        </AnimationSequence>
-
-        <div className="relative h-96">
-          <div className={`absolute w-full ${selectedTab === 0 ? 'fadeInLeft delay-2 z-10 ' : 'fadeOutLeft'}`}>
-            <AnimationSequence showedArea={showedArea}>
-              <p className="mb-4">
-                I always knew that I wanted to work on tech. My story starts at the
-                age of 15 when I wrote my first piece of code in the programming
-                language Pascal and from there I only kept learning until became a
-                professional developer.
-              </p>
-            </AnimationSequence>
-            <AnimationSequence showedArea={showedArea}>
-              <p className="mb-4">
-                After 3.5+ years of professional experience I have build large web
-                projects like ERP&apos;s and CRM&apos;s, stunning landing pages
-                having experience working in startups and large corporations
-                participating in multi-national teams.
-              </p>
-            </AnimationSequence>
-            <AnimationSequence showedArea={showedArea}>
-              <p className="">
-                Also I&apos;m a frequent participant of all sort of hackathons
-                organized in Guadalajara, MX.
-              </p>
-            </AnimationSequence>
-          </div>
-
-          <div className={`absolute w-full ${selectedTab === 1 ? 'fadeInRight delay-2 z-10' : 'fadeOutRight'}`}>
-            
+      {/* Content container */}
+      <div className="pl-8 pr-6 sm:pr-0 relative lg:flex">
+        {/* Tabs container */}
+        <div className="grow">
+          {/* Tabs selector */}
+          <AnimationSequence showedArea={showedArea}>
+            <div className="flex mb-4 items-end h-10">
+              <h3
+                className={`transition-all cursor-pointer ${
+                  selectedTab === 0
+                    ? "text-3xl font-bold accent-2"
+                    : "text-2xl text-gray-500"
+                }`}
+                onClick={() => setSelectedTab(0)}
+              >
+                Profile
+              </h3>
+              <h3
+                className={`ml-8 transition-all cursor-pointer ${
+                  selectedTab === 1
+                    ? "text-3xl font-bold accent-2"
+                    : "text-2xl text-gray-500"
+                }`}
+                onClick={() => setSelectedTab(1)}
+              >
+                Skills
+              </h3>
+            </div>
+          </AnimationSequence>
+          {/* Tabs content */}
+          <div
+            className={`relative transition-all duration-500 ${
+              selectedTab === 0 ? "h-128 sm:h-72" : "h-108 sm:h-56"
+            }  lg:h-96 xl:h-96`}
+          >
+            {/* Tab 0 (Profile content) */}
+            <div
+              className={`absolute w-full ${
+                selectedTab === 0 ? "fadeInLeft delay-2 z-10 " : "fadeOutLeft"
+              }`}
+            >
+              <AnimationSequence showedArea={showedArea}>
+                <p className="mb-4 ">
+                  I always knew that I wanted to work on tech. My story starts
+                  at the age of 15 when I wrote my first piece of code in the
+                  programming language Pascal and from there I only kept
+                  learning until became a professional developer.
+                </p>
+              </AnimationSequence>
+              <AnimationSequence showedArea={showedArea}>
+                <p className="mb-4">
+                  After 3.5+ years of professional experience I have build large
+                  web projects like ERP&apos;s and CRM&apos;s, stunning landing
+                  pages having experience working in startups and large
+                  corporations participating in multi-national teams.
+                </p>
+              </AnimationSequence>
+              <AnimationSequence showedArea={showedArea}>
+                <p className="">
+                  Also I&apos;m a frequent participant of all sort of hackathons
+                  organized in Guadalajara, MX.
+                </p>
+              </AnimationSequence>
+            </div>
+            {/* Tab 1 (Skills content) */}
+            <div
+              className={`absolute w-full ${
+                selectedTab === 1 ? "fadeInRight delay-2 z-10" : "fadeOutRight"
+              }`}
+            >
+              <div className="sm:flex sm:flex-wrap sm:justify-between">
+                {/* Frontend list */}
+                <div className="">
+                  <h4 className="font-bold text-xl">Frontend:</h4>
+                  <div className="flex items-top mt-2">
+                    <ul className="arrow-list pl-5 w-36 sm:w-32 lg:w-36 xl:w-48">
+                      <li>
+                        <p className="text-base"> HTML & CSS </p>
+                      </li>
+                      <li>
+                        <p className="text-base"> JavaScript </p>
+                      </li>
+                      <li>
+                        <p className="text-base"> TypeScript </p>
+                      </li>
+                      <li>
+                        <p className="text-base"> Es / RxJS </p>
+                      </li>
+                      <li>
+                        <p className="text-base"> Bootstrap </p>
+                      </li>
+                      <li>
+                        <p className="text-base"> Tailwind </p>
+                      </li>
+                    </ul>
+                    <ul className="arrow-list pl-5 ml-6 sm:ml-2 lg:ml-6 xl:ml-8">
+                      <li>
+                        <p className="text-base"> Angular </p>
+                      </li>
+                      <li>
+                        <p className="text-base"> React.js </p>
+                      </li>
+                      <li>
+                        <p className="text-base"> Next.js </p>
+                      </li>
+                      <li>
+                        <p className="text-base"> jQuery </p>
+                      </li>
+                      <li>
+                        <p className="text-base"> Three.js </p>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                {/* Backend list */}
+                <div className=" mt-4 sm:mt-0 lg:mt-4">
+                  <h4 className="font-bold text-xl">Backend & Arch:</h4>
+                  <div className="flex items-top mt-2">
+                    <ul className="arrow-list pl-5 w-36 sm:w-32 lg:w-36 xl:w-48">
+                      <li>
+                        <p className="text-base"> Rest APIs </p>
+                      </li>
+                      <li>
+                        <p className="text-base"> NodeJs </p>
+                      </li>
+                      <li>
+                        <p className="text-base"> Express.js </p>
+                      </li>
+                      <li>
+                        <p className="text-base"> AWS Ec2 </p>
+                      </li>
+                      <li>
+                        <p className="text-base"> Ubuntu CLI </p>
+                      </li>
+                    </ul>
+                    <ul className="arrow-list pl-5 ml-6 sm:ml-2 lg:ml-6 xl:ml-8">
+                      <li>
+                        <p className="text-base"> MongoDB </p>
+                      </li>
+                      <li>
+                        <p className="text-base"> SQL query </p>
+                      </li>
+                      <li>
+                        <p className="text-base"> json / xml </p>
+                      </li>
+                      <li>
+                        <p className="text-base"> NgInx </p>
+                      </li>
+                      <li>
+                        <p className="text-base"> Git </p>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-        
-        {/*  */}
-        <div className="h-48">
-          <div className="w-">
-            <Portrait/>
+        {/* Portrait containter */}
+        <div className="lg:mt-11">
+          <div className="w-100 flex justify-center">
+            <div className="w-36 mr-4 lg:mr-0 -mt-5 sm:mt-4 lg:ml-9 xl:w-44">
+              <AnimationSequence showedArea={showedArea}>
+                <Image
+                  src={profilePic}
+                  alt="Linkedin logo"
+                  width={250}
+                  height={250}
+                  className="rounded-lg"
+                />
+              </AnimationSequence>
+            </div>
+          </div>
+          <div className="w-100 flex justify-center mr-4 lg:mr-0 mt-4 lg:ml-9">
+            <AnimationSequence showedArea={showedArea}>
+              <a
+                href="https://drive.google.com/file/d/1tusWA4O10eeyqRBZ_SZnxgLqBfQWadHR/view?usp=sharing"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <BtnPrimary darkMode={darkMode} className="w-36 xl:w-44">
+                  Resume
+                </BtnPrimary>
+              </a>
+            </AnimationSequence>
           </div>
         </div>
-
       </div>
+      {/* Scroll indicator */}
+      {/* <div className="absolute left-0 right-0 flex justify-center -bottom-28 pl-8 mr-4 lg:mr-0">
+        <Link href="#experience" passHref>
+          <ChevronDownIcon
+            className={`h-14 cursor-pointer transition-opacity opacity-30 animate-bounce p-2 ${
+              darkMode ? "text-white" : "text-black"
+            }`}
+          />
+        </Link>
+      </div> */}
     </section>
   );
 };
