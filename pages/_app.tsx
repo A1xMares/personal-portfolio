@@ -1,6 +1,7 @@
 import "../styles/global.css";
 import { useEffect, useState, useRef } from "react";
 import Layout from "../components/layout";
+import Script from "next/script";
 
 export default function App({ Component, pageProps }) {
   const [darkMode, setDarkMode] = useState(false);
@@ -18,7 +19,10 @@ export default function App({ Component, pageProps }) {
     window.addEventListener("resize", handleResize);
   }, []);
 
-  useEffect(() => calculateArea(scrollY, windowHeight), [scrollY, windowHeight])
+  useEffect(
+    () => calculateArea(scrollY, windowHeight),
+    [scrollY, windowHeight]
+  );
 
   // Track scroll from top
   const handleScroll = (e) => {
@@ -46,18 +50,33 @@ export default function App({ Component, pageProps }) {
   };
 
   return (
-    <Layout
-      darkMode={darkMode}
-      toggleDarkMode={toggleDarkMode}
-      scrollY={scrollY}
-      windowHeight={windowHeight}
-    >
-      <Component
-        {...pageProps}
+    <>
+      {/* <!-- Global site tag (gtag.js) - Google Analytics --> */}
+      <Script 
+        strategy="lazyOnload"
+        src="https://www.googletagmanager.com/gtag/js?id=G-RT25P3F7F5"
+      ></Script>
+      <Script strategy="lazyOnload" id="google-analytics">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-RT25P3F7F5');
+        `}
+      </Script>
+      <Layout
         darkMode={darkMode}
+        toggleDarkMode={toggleDarkMode}
+        scrollY={scrollY}
         windowHeight={windowHeight}
-        showedArea={showedArea}
-      />
-    </Layout>
+      >
+        <Component
+          {...pageProps}
+          darkMode={darkMode}
+          windowHeight={windowHeight}
+          showedArea={showedArea}
+        />
+      </Layout>
+    </>
   );
 }
