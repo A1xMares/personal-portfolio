@@ -20,7 +20,7 @@ const projects = [
   },
   {
     title: "Adroit ERP Web App",
-    date: "While I was working for Adroit in 2020",
+    date: "While I was working at Adroit in 2020",
     description:
       "ERP to manage 6 departments of the company. Focused in logistics. Extensive qty of cruds and visualization modules",
     tags: ["Angular 9", "TS", "SCSS", "REST APIs"],
@@ -63,7 +63,7 @@ const projects = [
   },
   {
     title: "Aleate Website",
-    date: "While I was working for Aleate in 2019",
+    date: "While I was working at Aleate in 2019",
     description:
       "Landing page of a Mexican software company. Stunning space environment in 3D. Vanilla javascript. Customrouter.",
     tags: ["Three.js", "HTML", "CSS", "JS"],
@@ -77,7 +77,7 @@ const projects = [
   },
   {
     title: "Adroit CRM",
-    date: "While I was working for Aleate in 2019",
+    date: "While I was working at Aleate in 2019",
     description:
       "CRM to manage clients and its products, leads, deals (Commodity trading). Many roles, cruds, charts and maps.",
     tags: ["Angular 7", "TS", "SCSS", "REST APIs"],
@@ -91,7 +91,7 @@ const projects = [
   },
   {
     title: "Megadulces ERP",
-    date: "While I was working for Aleate in 2018",
+    date: "While I was working at Aleate in 2018",
     description:
       "ERP to manage 7 departments. Focused in storage and payments. Extensive qty of cruds. Supply routes designer.",
     tags: ["Angular 6", "TS", "CSS", "REST APIs"],
