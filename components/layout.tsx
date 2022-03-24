@@ -11,8 +11,6 @@ interface Props {
   windowHeight: number;
 }
 
-const body = document.querySelector("body");
-
 const Layout = ({
   children,
   darkMode,
@@ -24,6 +22,7 @@ const Layout = ({
 
   const handleMenu = (value) => {
     setMobileMenu(value);
+    const body = document.querySelector("body");
     if (value) {
       body.style.overflow = "hidden";
     } else {
