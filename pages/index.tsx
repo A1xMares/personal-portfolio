@@ -11,12 +11,12 @@ function HomePage({ darkMode, showedArea, scrollY }) {
       {/* Metadata */}
       <Head>
         <title>AlxMares | Web Developer</title>
-        <meta name="description" content="Alejandro Mares is a doftware developer specialized in Full Stack Web Development, having 3.5+ years of experience working in large projects."/>
+        <meta name="description" content="Alejandro Mares is a software developer specialized in Full Stack Web Development, having 3.5+ years of experience working in large projects."/>
 
         <meta property="og:url" content="https://www.alxmares.com/"/>
         <meta property="og:type" content="website"/>
         <meta property="og:title" content="AlxMares | Web Developer"/>
-        <meta property="og:description" content="Alejandro Mares is a doftware developer specialized in Full Stack Web Development, having 3.5+ years of experience working in large projects."/>
+        <meta property="og:description" content="Alejandro Mares is a software developer specialized in Full Stack Web Development, having 3.5+ years of experience working in large projects."/>
         <meta property="og:image" content="https://www.alxmares.com/index.jpg"/>
         <meta property="og:image:secure_url" content="https://www.alxmares.com/index.jpg"/>
         <meta property="og:image:type" content="image/jpeg" />
