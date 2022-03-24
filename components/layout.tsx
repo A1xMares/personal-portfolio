@@ -1,6 +1,6 @@
 import Navbar from "./shared/navbar";
 import Footer from "./shared/footer";
-import { useEffect, useState, useRef } from "react";
+import { useState } from "react";
 
 // Navbar component 'props' interface
 interface Props {
@@ -9,10 +9,9 @@ interface Props {
   toggleDarkMode?: any;
   scrollY: number;
   windowHeight: number;
-  handleScroll: any;
 }
 
-let listener = null;
+const body = document.querySelector("body");
 
 const Layout = ({
   children,
@@ -20,26 +19,23 @@ const Layout = ({
   toggleDarkMode,
   scrollY,
   windowHeight,
-  handleScroll,
 }: Props) => {
   const [mobileMenu, setMobileMenu] = useState(false);
-  const scrollable: any = useRef<HTMLDivElement>(null);
 
-  // Set event listeners and get default darkmode
-  useEffect(() => {
-    if (!listener) {
-      listener = scrollable.current.addEventListener("scroll", (e) =>
-        handleScroll(e.target.scrollTop)
-      );
+  const handleMenu = (value) => {
+    setMobileMenu(value);
+    if (value) {
+      body.style.overflow = "hidden";
+    } else {
+      body.style.overflow = "auto";
     }
-  }, []);
+  }
 
   return (
     <div
       className={`transition-colors duration-300 h-screen	${
         darkMode ? "dark dark-back" : "bg-white"
-      } ${mobileMenu ? "overflow-hidden" : "overflow-x-hidden"}`}
-      ref={scrollable}
+      } `}
     >
       <Navbar
         darkMode={darkMode}
@@ -47,7 +43,7 @@ const Layout = ({
         scrollY={scrollY}
         windowHeight={windowHeight}
         mobileMenu={mobileMenu}
-        setMobileMenu={setMobileMenu}
+        setMobileMenu={handleMenu}
       ></Navbar>
       <main className="overflow-hidden">{children}</main>
       <Footer></Footer>

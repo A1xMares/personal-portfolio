@@ -1,7 +1,5 @@
-import { ChevronDownIcon } from "@heroicons/react/solid";
 import Intro from "../components/index/intro";
 import About from "../components/index/about";
-import Link from "next/link";
 import Experience from "../components/index/experience";
 import Work from "../components/index/work";
 import Contact from "../components/index/contact";
@@ -14,20 +12,25 @@ function HomePage({ darkMode, showedArea, scrollY }) {
       <Head>
         <title>AlxMares | Web Developer</title>
         <meta name="description" content="Alejandro Mares is a doftware developer specialized in Full Stack Web Development, having 3.5+ years of experience working in large projects."/>
-        <meta property="og:title" content="AlxMares | Web Developer" key="title"/>
-        <meta property="og:type" content="website"/>
+
         <meta property="og:url" content="https://www.alxmares.com/"/>
-        <meta property="og:site_name" content="Alejandro Mares | Web Developer"/>
+        <meta property="og:type" content="website"/>
+        <meta property="og:title" content="AlxMares | Web Developer"/>
         <meta property="og:description" content="Alejandro Mares is a doftware developer specialized in Full Stack Web Development, having 3.5+ years of experience working in large projects."/>
-        <meta property="og:image" content="https://www.gridcompany.com.mx/index.jpg"/>
-        <meta property="og:image:secure_url" content="https://www.alxmares.com/"/>
-        <meta property="og:image:type" content="image/jpg" />
+        <meta property="og:image" content="https://www.alxmares.com/index.jpg"/>
+        <meta property="og:image:secure_url" content="https://www.alxmares.com/index.jpg"/>
+        <meta property="og:image:type" content="image/jpeg" />
         <meta property="og:image:alt" content="Inicio portafolio"/>
+        <meta property="og:site_name" content="Alejandro Mares | Web Developer"/>
+        
         <meta property="og:locale" content="en_US"/>
 
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@Alxmres" />
-        <meta name="twitter:creator" content="@Alxmres" />
+        <meta name="twitter:title" content="AlxMares | Web Developer"/>
+        <meta property="twitter:domain" content="alxmares.com" key="domain"/>
+        <meta property="twitter:url" content="https://www.alxmares.com/" key="url"/>
+        <meta name="twitter:description" content="Alejandro Mares is a doftware developer specialized in Full Stack Web Development, having 3.5+ years of experience working in large projects."/>
+        <meta name="twitter:image" content="https://www.alxmares.com/index.jpg"/>
 
         <meta name="keywords" content="alejandro mares, alxmares, alx mares, web development, full stack, remote developer, angular developer, react developer" ></meta>
         <link rel="shortcut icon" href="/favicon.ico" />
