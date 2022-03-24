@@ -10,7 +10,7 @@ function HomePage({ darkMode, showedArea, scrollY }) {
     <>
       {/* Metadata */}
       <Head>
-        <title>AlxMares | Web Developer</title>
+        <title>Alejandro Mares | Web Developer</title>
         <meta
           name="description"
           content="Alejandro Mares is a Full Stack Web Developer specializaed in frontend having years of experience building web projects with js, angular and react."
@@ -18,7 +18,7 @@ function HomePage({ darkMode, showedArea, scrollY }) {
 
         <meta property="og:url" content="https://www.alxmares.com/" />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="AlxMares | Web Developer" />
+        <meta property="og:title" content="Alejandro Mares | Web Developer" />
         <meta
           property="og:description"
           content="Alejandro Mares is a Full Stack Web Developer specializaed in frontend  having years of experience building web projects with js, angular and react."
@@ -41,7 +41,7 @@ function HomePage({ darkMode, showedArea, scrollY }) {
         <meta property="og:locale" content="en_US" />
 
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="AlxMares | Web Developer" />
+        <meta name="twitter:title" content="Alejandro Mares | Web Developer" />
         <meta property="twitter:domain" content="alxmares.com" key="domain" />
         <meta
           property="twitter:url"
