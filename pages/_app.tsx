@@ -52,23 +52,18 @@ export default function App({ Component, pageProps }) {
   return (
     <>
       {/* <!-- Global site tag (gtag.js) - Google Analytics --> */}
-      {process.env.IS_LOCAL === "false" && (
-        <>
-          <Script
-            strategy="lazyOnload"
-            src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
-          ></Script>
-          <Script strategy="lazyOnload" id="google-analytics">
-            {`
+      <Script 
+        strategy="lazyOnload"
+        src="https://www.googletagmanager.com/gtag/js?id=G-RT25P3F7F5"
+      ></Script>
+      <Script strategy="lazyOnload" id="google-analytics">
+        {`
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
-          gtag('config', ${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS});
+          gtag('config', 'G-RT25P3F7F5');
         `}
-          </Script>
-        </>
-      )}
-
+      </Script>
       <Layout
         darkMode={darkMode}
         toggleDarkMode={toggleDarkMode}
