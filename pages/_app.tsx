@@ -39,6 +39,9 @@ export default function App({ Component, pageProps }) {
 
   // Change user's darkmode preference
   const toggleDarkMode = () => {
+    const body = document.querySelector("body");
+    body.classList.remove(!darkMode ? "bg-white" : "dark-back");
+    body.classList.add(!darkMode ? "dark-back" : "bg-white");
     setDarkMode(!darkMode);
   };
 

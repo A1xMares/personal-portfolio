@@ -33,7 +33,7 @@ const Layout = ({
   return (
     <div
       className={`transition-colors duration-300 ${
-        darkMode ? "dark dark-back" : "bg-white"
+        darkMode ? "dark" : ""
       } `}
     >
       <Navbar
