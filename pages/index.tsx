@@ -13,7 +13,7 @@ function HomePage({ darkMode, showedArea, scrollY }) {
         <title>Alejandro Mares | Web Developer</title>
         <meta
           name="description"
-          content="Alejandro Mares is a Full Stack Web Developer specializaed in frontend having years of experience building web projects with js, angular and react."
+          content="Alejandro Mares Sanchez is a Full Stack Web Developer specializaed in frontend having years of experience building web projects with js, angular and react."
         />
 
         <meta property="og:url" content="https://www.alxmares.com/" />
@@ -21,7 +21,7 @@ function HomePage({ darkMode, showedArea, scrollY }) {
         <meta property="og:title" content="Alejandro Mares | Web Developer" />
         <meta
           property="og:description"
-          content="Alejandro Mares is a Full Stack Web Developer specializaed in frontend  having years of experience building web projects with js, angular and react."
+          content="Alejandro Mares Sanchez is a Full Stack Web Developer specializaed in frontend  having years of experience building web projects with js, angular and react."
         />
         <meta
           property="og:image"
@@ -50,7 +50,7 @@ function HomePage({ darkMode, showedArea, scrollY }) {
         />
         <meta
           name="twitter:description"
-          content="Alejandro Mares is a Full Stack Web Developer specializaed in frontend  having years of experience building web projects with js, angular and react."
+          content="Alejandro Mares Sanchez is a Full Stack Web Developer specializaed in frontend  having years of experience building web projects with js, angular and react."
         />
         <meta
           name="twitter:image"
