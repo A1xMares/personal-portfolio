@@ -15,7 +15,6 @@ function HomePage({ darkMode, showedArea, scrollY }) {
           name="description"
           content="Alejandro Mares Sanchez is a Full Stack Web Developer specializaed in frontend having years of experience building web projects with js, angular and react."
         />
-
         <meta property="og:url" content="https://www.alxmares.com/" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Alejandro Mares | Web Developer" />
