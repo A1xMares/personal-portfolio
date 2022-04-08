@@ -25,7 +25,7 @@ const Card = ({ darkMode, project }) => {
 
   return (
     <div
-      className={`transition-all card-height w-full rounded-2xl border  hover:shadow-md overflow-hidden flex flex-col ${
+      className={`transition-all card-height w-full rounded-2xl border hover:shadow-md overflow-hidden flex flex-col ${
         darkMode ? "dark-back-op " : "bg-gray-100 border-gray-200"
       }`}
     >
@@ -36,26 +36,30 @@ const Card = ({ darkMode, project }) => {
         }`}
       >
         <img src={project.gallery[index]} alt={project.title} className="card-img"/>
-        <div
-          className={`absolute left-3 -bottom-3 rounded-full shadow ${
-            darkMode ? "bg-slate-800 border border-gray-500" : "bg-white"
+        <button
+          className={`absolute left-3 -bottom-3 rounded-full disabled:shadow-none cursor-pointer disabled:cursor-default transition-all ease-out duration-500 ${
+            darkMode ? "bg-slate-600 disabled:bg-slate-800 shadow-xl" : "bg-white disabled:bg-gray-100 shadow-lg"  
           }`}
           onClick={() => handlePrev()}
+          type="button"
+          disabled={index === 0}
         >
           <ChevronLeftIcon
-            className={`h-6 cursor-pointer opacity-100 accent-2`}
+            className={`h-6 opacity-100 ${darkMode ? 'text-gray-300' : 'accent-2'}`}
           />
-        </div>
-        <div
-          className={`absolute right-3 -bottom-3 rounded-full shadow ${
-            darkMode ? "bg-slate-800 border border-gray-500" : "bg-white"
+        </button>
+        <button
+          className={`absolute right-3 -bottom-3 rounded-full  disabled:shadow-none cursor-pointer disabled:cursor-default transition-all ease-out duration-500 ${
+            darkMode ? "bg-slate-600 disabled:bg-slate-800 shadow-xl" : "bg-white disabled:bg-gray-100 shadow-lg"
           }`}
           onClick={() => handleNext()}
+          type="button"
+          disabled={index === project.gallery.length - 1}
         >
           <ChevronRightIcon
-            className={`h-6 cursor-pointer opacity-100 accent-2`}
+            className={`h-6 opacity-100 ${darkMode ? 'text-gray-300' : 'accent-2'}`}
           />
-        </div>
+        </button>
       </div>
       {/* Content */}
       <div className="pt-5 pb-5 px-4 flex flex-col justify-between grow">

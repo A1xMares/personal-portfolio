@@ -8,8 +8,8 @@ const projects = [
     title: "Integreat Website",
     date: "Freelance project worked in 2021",
     description:
-      "Landing page of a Mexican software company. Stunning space environment in 3D. Vanilla javascript. Customrouter.",
-    tags: ["Three.js", "SEO", "HTML", "CSS", "JS"],
+      "Website of an European consulting company. Manage internazionalization to 6 languages. 14+ pages.",
+    tags: ["Angular 11", "TS", "SCSS", "i18n"],
     gallery: [
       "/img/integreat/erpsolutions-min.webp",
       "/img/integreat/whyus-min.webp",
@@ -37,7 +37,7 @@ const projects = [
     title: "Unisun CRM Web App",
     date: "Freelance project worked in 2020",
     description:
-      "CRM for an online school. Focused in manage the student payment dues, prepared to manage many campuses.",
+      "CRM for an online school. Focused in manage the student payment dues, prepared to manage many in-place campuses.",
     tags: ["Angular 9", "TS", "SCSS", "REST APIs"],
     gallery: [
       "/img/unisun/unisun2-min.webp",
@@ -51,7 +51,7 @@ const projects = [
     title: "Grid Landing",
     date: "Freelance project worked in 2020",
     description:
-      "Landing page of a Mexican software company. Stunning space environment in 3D. Vanilla javascript. Customrouter.",
+      "Landing page of a small Mexican software consulting company. Based and customized from a royalty free template. Done in 2 days.",
     tags: ["HTML", "CSS", "JS"],
     gallery: [
       "/img/grid/grid1-min.webp",
@@ -59,7 +59,7 @@ const projects = [
       "/img/grid/grid3-min.webp",
     ],
     githubLink: "",
-    url: "https://www.aleate.com/",
+    url: "https://www.gridcompany.com.mx/",
   },
   {
     title: "Aleate Website",

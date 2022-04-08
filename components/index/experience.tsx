@@ -323,15 +323,14 @@ const Experience = ({ darkMode, showedArea }) => {
                       selectedInner === 3 ? "fadeInBottom" : "fadeInUnseen"
                     }`}
                   >
-                    Jan 2019 — Present
+                    Jan 2019 — Jan 2022
                   </p>
                   <p
                     className={`text-base mt-2 ${
                       selectedInner === 3 ? "fadeInBottom" : "fadeInUnseen"
                     }`}
                   >
-                    Worked as a remote developer in a corporate IT team, managed
-                    from the USA using SCRUM methodology.
+                    I have worked in some freelance projects, participating mainly as frontend web developer.
                   </p>
                   <ul className="arrow-list pl-8 mt-4">
                     <li
@@ -354,7 +353,7 @@ const Experience = ({ darkMode, showedArea }) => {
                       <p className="text-base">
                         <strong>Grid&apos;s landing page</strong>, developed the
                         landing page of a Mexican company in a very limited time
-                        frame (2 days).{" "}
+                        frame (2 days).
                         <a
                           href="https://www.gridcompany.com.mx/"
                           target="_blank"
@@ -375,7 +374,7 @@ const Experience = ({ darkMode, showedArea }) => {
                         <strong>Integreat&apos;s website</strong>, developed the
                         current website of an European consulting company,
                         developing 15+ pages and implementing
-                        internationalization of 6 languages.{" "}
+                        internationalization of 6 languages.
                         <a
                           href="https://integreat.com/es/inicio"
                           target="_blank"
