@@ -126,16 +126,17 @@ const Experience = ({ darkMode, showedArea }) => {
                               {/* PROJECT TAGS */}
                               <div className="flex items-center justify-between mt-2">
                                 <div className="flex gap-2 mr-4">
-                                  {project.tags && project.tags.map((tag) => {
-                                    return (
-                                      <div
-                                        className="px-2 h-5 rounded-full text-gray-600 bg-gray-200 font-semibold text-sm flex items-center"
-                                        key={tag}
-                                      >
-                                        {tag}
-                                      </div>
-                                    );
-                                  })}
+                                  {project.tags &&
+                                    project.tags.map((tag) => {
+                                      return (
+                                        <div
+                                          className={`px-2 h-5 rounded-full  font-semibold text-sm flex items-center ${darkMode ? "text-gray-200 border border-gray-400" : "text-gray-600 bg-gray-200"}`}
+                                          key={tag}
+                                        >
+                                          {tag}
+                                        </div>
+                                      );
+                                    })}
                                 </div>
                                 {project.externalRef && (
                                   <a
@@ -163,8 +164,12 @@ const Experience = ({ darkMode, showedArea }) => {
                               className="flex items-center cursor-pointer px-2 mr-4 group "
                               onClick={() => setSelected(selected - 1)}
                             >
-                              <ArrowNarrowLeftIcon className="w-5 mr-1 " />
-                              <p className="  ">
+                              <ArrowNarrowLeftIcon
+                                className={`w-5 mr-1 ${
+                                  darkMode ? "accent-1 " : "text-black "
+                                }`}
+                              />
+                              <p className={darkMode ? "accent-1 " : "text-black "}>
                                 {JobsData[index - 1].place?.name ||
                                   JobsData[index - 1].position}
                               </p>
@@ -177,11 +182,15 @@ const Experience = ({ darkMode, showedArea }) => {
                               className="flex items-center cursor-pointer px-2 group "
                               onClick={() => setSelected(selected + 1)}
                             >
-                              <p className=" ">
+                              <p className={darkMode ? "accent-1 " : "text-black "}>
                                 {JobsData[index + 1].place?.name ||
                                   JobsData[index + 1].position}
                               </p>
-                              <ArrowNarrowRightIcon className="w-5 ml-1 " />
+                              <ArrowNarrowRightIcon
+                                className={`w-5 ml-1 ${
+                                  darkMode ? "accent-1 " : "text-black "
+                                }`}
+                              />
                             </button>
                           )}
                         </div>
