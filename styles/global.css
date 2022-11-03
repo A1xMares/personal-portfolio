@@ -111,22 +111,6 @@ p {
   background-color: #6e85b2 !important;
 }
 
-.h-experience {
-    height: 48rem;
-}
-
-@media (min-width: 640px) {
-     .h-experience {
-        height: 36rem;
-     }
-}
-
-@media (min-width: 1280px) {
-    .h-experience {
-       height: 32rem;
-    }
-}
-
 .h-128 {
   height: 32rem;
 }

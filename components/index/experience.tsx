@@ -1,6 +1,11 @@
 import { ChevronDownIcon } from "@heroicons/react/solid";
+import {
+  ArrowNarrowRightIcon,
+  ArrowNarrowLeftIcon,
+} from "@heroicons/react/solid";
 import Link from "next/link";
 import { useState } from "react";
+import { JobsData } from "../../consts/jobsData";
 import AnimationSequence from "../helpers/animationSequence";
 import Subtitle from "../shared/subtitle";
 
@@ -27,381 +32,167 @@ const Experience = ({ darkMode, showedArea }) => {
         </AnimationSequence>
       </div>
 
-      <div className="pl-8 pt-4 relative">
+      <div className="pl-10 pt-4 relative">
         <AnimationSequence showedArea={showedArea}>
-          <div className="flex justify-center flex-col h-experience box-border	">
-            {/* Bosch experience */}
-            <div
-              className={`h-full basis-1 transition-all duration-300 ease-out ${
-                selected === 0 ? "grow" : ""
-              }`}
-              id="Bosch"
-            >
-              <h3
-                onClick={() => handleSelected(0)}
-                className={`text-2xl cursor-pointer h-10  ${
-                  selected === 0 ? "font-bold" : ""
-                }`}
-              >
-                Web dev at{" "}
-                <a
-                  href="https://www.bosch.com/"
-                  target="_blank"
-                  rel="noreferrer"
-                  aria-label="Go to bosch"
-                  className="accent-2 underline hover:underline-offset-2"
-                >
-                  Bosch
-                </a>
-              </h3>
-              <div className={selected === 0 ? "" : "absolute hidden"}>
+          <div className="flex justify-start flex-col  box-border	">
+            {JobsData.map((job, index) => {
+              return (
                 <div
-                  className={`${
-                    selectedInner === 0 ? "h-full" : "h-0 overflow-hidden"
+                  className={`h-auto basis-1 transition-all duration-300 ease-out ${
+                    selected === index && index !== 0 ? "mt-2" : ""
                   }`}
+                  id={job?.place?.name || job.position}
+                  key={job?.place?.name || job.position}
                 >
-                  <p
-                    className={`text-sm accent-1 ${
-                      selectedInner === 0 ? "fadeInBottom" : "fadeInUnseen"
+                  {/* JOB HEADER */}
+                  <h3
+                    onClick={() => handleSelected(index)}
+                    className={` cursor-pointer flex -ml-9 ${
+                      selected === index
+                        ? "font-bold text-3xl h-12"
+                        : "text-2xl h-9"
                     }`}
                   >
-                    Sep 2020 — Present
-                  </p>
-                  <p
-                    className={`text-base mt-2 ${
-                      selectedInner === 0 ? "fadeInBottom" : "fadeInUnseen"
+                    <ChevronDownIcon
+                      className={`h-6 w-8 mt-1 transition-all p-0 duration-300 ${
+                        darkMode
+                          ? selected === index
+                            ? "text-white "
+                            : "text-gray-100 "
+                          : selected === index
+                          ? "text-black "
+                          : "text-gray-400 "
+                      }${selected !== index && "-rotate-90"}`}
+                    />
+                    {job.position} {job.place && "at"}
+                    {job.place && (
+                      <a
+                        href={job.place.url}
+                        target="_blank"
+                        rel="noreferrer"
+                        aria-label={job.place.label}
+                        className="underline hover:!text-blue-600 ml-1"
+                      >
+                        {job.place.name}
+                      </a>
+                    )}
+                  </h3>
+                  {/* JOB BODY CONTENT */}
+                  <div
+                    className={`pb-9 ${
+                      selected === index ? "" : "absolute hidden"
                     }`}
                   >
-                    Worked as a remote developer in a corporate IT team, managed
-                    from the USA using SCRUM methodology.
-                  </p>
-                  <ul className="arrow-list pl-8 mt-4">
-                    <li
-                      className={`delay-1 ${
-                        selectedInner === 0 ? "fadeInBottom" : "fadeInUnseen"
+                    <div
+                      className={`${
+                        selected === index ? "h-auto" : "h-0 overflow-hidden"
                       }`}
                     >
-                      <p className="text-base">
-                        <strong>ITSM DASH,</strong> developed an internal
-                        project to improve Bosch&apos;s Support Agents
-                        performance, enabling a smart search of support articles
-                        as well as ticket raising forms. Used React.js for
-                        front-end and Node.js, Express.js for back-end querying
-                        SQL databases.
+                      {/* JOB TIME FRAME */}
+                      <p
+                        className={`text-sm accent-1 font-semibold  ${
+                          selected === index ? "fadeInBottom" : "fadeInUnseen"
+                        }`}
+                      >
+                        {job.time}
                       </p>
-                    </li>
-                    <li
-                      className={`mt-4 delay-2 ${
-                        selectedInner === 0 ? "fadeInBottom" : "fadeInUnseen"
-                      }`}
-                    >
-                      <p className="text-base">
-                        <strong>IT Service Portal,</strong> developed new
-                        modules and performed maintenance of a long term
-                        internal web-app with a 400k+ user base. Used
-                        Backbone.js, jQuery for front-end and JSPs to query SQL
-                        databases.
+                      {/* JOB DESCRIPTION */}
+                      <p
+                        className={`text-base mt-2 ${
+                          selected === index ? "fadeInBottom" : "fadeInUnseen"
+                        }`}
+                      >
+                        {job.description}
                       </p>
-                    </li>
-                    <li
-                      className={`mt-4 delay-3 ${
-                        selectedInner === 0 ? "fadeInBottom" : "fadeInUnseen"
-                      }`}
-                    >
-                      <p className="text-base">
-                        <strong>Level 3 support,</strong> provided level 3
-                        technical support to advanced users.
-                      </p>
-                    </li>
-                  </ul>
+                      {/* JOB PROJECTS */}
+                      <ul className="arrow-list pl-8 mt-5">
+                        {job.projects.map((project, i) => {
+                          return (
+                            <li
+                              className={` mb-5 ${
+                                selected === index
+                                  ? "fadeInBottom"
+                                  : "fadeInUnseen"
+                              }`}
+                              key={project.title}
+                            >
+                              {/* PROJECT DETAILS */}
+                              <p className="text-base text-justify">
+                                {project.title && (
+                                  <strong>{project.title},</strong>
+                                )}{" "}
+                                {project.details}{" "}
+                              </p>
+                              {/* PROJECT TAGS */}
+                              <div className="flex items-center justify-between mt-2">
+                                <div className="flex gap-2 mr-4">
+                                  {project.tags && project.tags.map((tag) => {
+                                    return (
+                                      <div
+                                        className="px-2 h-5 rounded-full text-gray-600 bg-gray-200 font-semibold text-sm flex items-center"
+                                        key={tag}
+                                      >
+                                        {tag}
+                                      </div>
+                                    );
+                                  })}
+                                </div>
+                                {project.externalRef && (
+                                  <a
+                                    href={project.externalRef}
+                                    target="_blank"
+                                    rel="noreferrer"
+                                    aria-label="View Project"
+                                    className="accent-2 font-semibold hover:!text-blue-600"
+                                  >
+                                    View Project
+                                  </a>
+                                )}
+                              </div>
+                            </li>
+                          );
+                        })}
+                      </ul>
+                      {/* PREV - NEXT BUTTONS */}
+                      <div
+                        className={`flex justify-end items-center mt-6 fadeInBottom`}
+                      >
+                        <div>
+                          {JobsData[index - 1] && (
+                            <button
+                              className="flex items-center cursor-pointer px-2 mr-4 group "
+                              onClick={() => setSelected(selected - 1)}
+                            >
+                              <ArrowNarrowLeftIcon className="w-5 mr-1 " />
+                              <p className="  ">
+                                {JobsData[index - 1].place?.name ||
+                                  JobsData[index - 1].position}
+                              </p>
+                            </button>
+                          )}
+                        </div>
+                        <div>
+                          {JobsData[index + 1] && (
+                            <button
+                              className="flex items-center cursor-pointer px-2 group "
+                              onClick={() => setSelected(selected + 1)}
+                            >
+                              <p className=" ">
+                                {JobsData[index + 1].place?.name ||
+                                  JobsData[index + 1].position}
+                              </p>
+                              <ArrowNarrowRightIcon className="w-5 ml-1 " />
+                            </button>
+                          )}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
-            {/* Adroit experience */}
-            <div
-              className={` h-full basis-1 transition-all duration-300 ease-out ${
-                selected === 1 ? "grow" : ""
-              }`}
-              id="Adroit"
-            >
-              <h3
-                onClick={() => handleSelected(1)}
-                className={`text-2xl cursor-pointer h-10 whitespace-nowrap ${
-                  selected === 1 ? "font-bold" : ""
-                }`}
-              >
-                Web dev at{" "}
-                <a
-                  href="https://adroitoverseas.com/"
-                  target="_blank"
-                  rel="noreferrer"
-                  aria-label="Go to adroit"
-                  className="accent-2 underline hover:underline-offset-2"
-                >
-                  Adroit
-                </a>
-              </h3>
-              <div className={selected === 1 ? "" : "absolute hidden"}>
-                <div
-                  className={`${
-                    selectedInner === 1 ? "h-full" : "h-0 overflow-hidden"
-                  }`}
-                >
-                  <p
-                    className={`text-sm accent-1 ${
-                      selectedInner === 1 ? "fadeInBottom" : "fadeInUnseen"
-                    }`}
-                  >
-                    Nov 2019 — Sep 2020
-                  </p>
-                  <p
-                    className={`text-base mt-2 ${
-                      selectedInner === 1 ? "fadeInBottom" : "fadeInUnseen"
-                    }`}
-                  >
-                    Worked as a remote developer for a Canadian agro commodities
-                    export company. Founder member of internal tech department.
-                  </p>
-                  <ul className="arrow-list pl-8 mt-4">
-                    <li
-                      className={`delay-1 ${
-                        selectedInner === 1 ? "fadeInBottom" : "fadeInUnseen"
-                      }`}
-                    >
-                      <p className="text-base">
-                        <strong>Internal CRM,</strong> improved overall UI/UX
-                        developing new modules to extend functionality. Worked
-                        with Angular 7 and Material Design.
-                      </p>
-                    </li>
-                    <li
-                      className={`mt-4 delay-2 ${
-                        selectedInner === 1 ? "fadeInBottom" : "fadeInUnseen"
-                      }`}
-                    >
-                      <p className="text-base">
-                        <strong>Internal ERP,</strong> scaled the aforementioned
-                        CRM to an ERP developing new modules and business logic
-                        to manage 6 company departments like sales, logistics,
-                        customers, many roles each department. Scaled Angular
-                        from version 7 to versions 9. Used Node, LoopBack and
-                        Mongo.
-                      </p>
-                    </li>
-                    <li
-                      className={`mt-4 delay-3 ${
-                        selectedInner === 1 ? "fadeInBottom" : "fadeInUnseen"
-                      }`}
-                    >
-                      <p className="text-base">
-                        <strong>Level 3 support,</strong> provided technical
-                        support to users located in Canada.
-                      </p>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            {/* Aleate experience */}
-            <div
-              className={` h-full basis-1 transition-all duration-300 ease-out ${
-                selected === 2 ? "grow" : ""
-              }`}
-              id="Aleate"
-            >
-              <h3
-                onClick={() => handleSelected(2)}
-                className={`text-2xl cursor-pointer h-10 ${
-                  selected === 2 ? "font-bold" : ""
-                }`}
-              >
-                Web dev at{" "}
-                <a
-                  href="https://www.aleate.com/"
-                  target="_blank"
-                  rel="noreferrer"
-                  aria-label="Go to aleate"
-                  className="accent-2 underline hover:underline-offset-2"
-                >
-                  Aleate
-                </a>
-              </h3>
-              <div className={selected === 2 ? "" : "absolute hidden"}>
-                <div
-                  className={`${
-                    selectedInner === 2 ? "h-auto" : "h-0 overflow-hidden"
-                  }`}
-                >
-                  <p
-                    className={`text-sm accent-1 ${
-                      selectedInner === 2 ? "fadeInBottom" : "fadeInUnseen"
-                    }`}
-                  >
-                    Aug 2018 — Oct 2019
-                  </p>
-                  <p
-                    className={`text-base mt-2 ${
-                      selectedInner === 2 ? "fadeInBottom" : "fadeInUnseen"
-                    }`}
-                  >
-                    Worked locally being responsible of the front-end
-                    development of many projects and contributing with design
-                    team.
-                  </p>
-                  <ul className="arrow-list pl-8 mt-4">
-                    <li
-                      className={`delay-1 ${
-                        selectedInner === 2 ? "fadeInBottom" : "fadeInUnseen"
-                      }`}
-                    >
-                      <p className="text-base">
-                        <strong>Aleate&apos;s website,</strong> developed the
-                        first version of the Aleate&apos;s current website
-                        proposing and implementing an interactive 3D environment
-                        to deliver an outstanding UX.{" "}
-                        <a
-                          href="https://www.aleate.com/"
-                          target="_blank"
-                          rel="noreferrer"
-                          aria-label="Go to aleate"
-                          className="accent-2 underline hover:underline-offset-2"
-                        >
-                          View Project.
-                        </a>
-                      </p>
-                    </li>
-                    <li
-                      className={`mt-4 delay-2 ${
-                        selectedInner === 2 ? "fadeInBottom" : "fadeInUnseen"
-                      }`}
-                    >
-                      <p className="text-base">
-                        <strong>Adroit Overseas&apos;s internal CRM,</strong>{" "}
-                        developed the 1st version of a CRM with large amount of
-                        CRUDs, charts and maps for data visualization.
-                      </p>
-                    </li>
-                    <li
-                      className={`mt-4 delay-3 ${
-                        selectedInner === 2 ? "fadeInBottom" : "fadeInUnseen"
-                      }`}
-                    >
-                      <p className="text-base">
-                        <strong>Megadulces&apos;s internal ERP,</strong>{" "}
-                        developed the 1st version of an ERP to manage the
-                        company process&apos;s from manufacturing, distribution,
-                        reporting and quality assurance.
-                      </p>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            {/* Freelance experience */}
-            <div
-              className={` h-full basis-1 transition-all duration-300 ease-out ${
-                selected === 3 ? "grow" : ""
-              }`}
-              id="Freelance"
-            >
-              <h3
-                onClick={() => handleSelected(3)}
-                className={`text-2xl cursor-pointer h-10 ${
-                  selected === 3 ? "font-bold" : ""
-                }`}
-              >
-                Freelance dev
-              </h3>
-              <div className={selected === 3 ? "" : "absolute hidden"}>
-                <div
-                  className={`${
-                    selectedInner === 3 ? "h-full" : "h-0 overflow-hidden"
-                  }`}
-                >
-                  <p
-                    className={`text-sm accent-1 ${
-                      selectedInner === 3 ? "fadeInBottom" : "fadeInUnseen"
-                    }`}
-                  >
-                    Jan 2019 — Jan 2022
-                  </p>
-                  <p
-                    className={`text-base mt-2 ${
-                      selectedInner === 3 ? "fadeInBottom" : "fadeInUnseen"
-                    }`}
-                  >
-                    I have worked in some freelance projects, participating mainly as frontend web developer.
-                  </p>
-                  <ul className="arrow-list pl-8 mt-4">
-                    <li
-                      className={`delay-1 ${
-                        selectedInner === 3 ? "fadeInBottom" : "fadeInUnseen"
-                      }`}
-                    >
-                      <p className="text-base">
-                        <strong>Unisun&apos;s CRM,</strong> developed the 1st
-                        version of an internal CRM for an online school to
-                        manage the student base, its payment dues and organize
-                        online classrooms.
-                      </p>
-                    </li>
-                    <li
-                      className={`mt-4 delay-2 ${
-                        selectedInner === 3 ? "fadeInBottom" : "fadeInUnseen"
-                      }`}
-                    >
-                      <p className="text-base">
-                        <strong>Grid&apos;s landing page</strong>, developed the
-                        landing page of a Mexican company in a very limited time
-                        frame (2 days).
-                        <a
-                          href="https://www.gridcompany.com.mx/"
-                          target="_blank"
-                          rel="noreferrer"
-                          aria-label="Go to grid"
-                          className="accent-2 underline hover:underline-offset-2"
-                        >
-                          View Project.
-                        </a>
-                      </p>
-                    </li>
-                    <li
-                      className={`mt-4 delay-3 ${
-                        selectedInner === 3 ? "fadeInBottom" : "fadeInUnseen"
-                      }`}
-                    >
-                      <p className="text-base">
-                        <strong>Integreat&apos;s website</strong>, developed the
-                        current website of an European consulting company,
-                        developing 15+ pages and implementing
-                        internationalization of 6 languages.
-                        <a
-                          href="https://integreat.com/es/inicio"
-                          target="_blank"
-                          rel="noreferrer"
-                          aria-label="Go to integreat"
-                          className="accent-2 underline hover:underline-offset-2"
-                        >
-                          View Project.
-                        </a>
-                      </p>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
+              );
+            })}
           </div>
         </AnimationSequence>
-        {/* Scroll indicator */}
-        {/* <div className="absolute left-0 right-0 flex justify-center -bottom-36 pl-8 mr-4 lg:mr-0">
-          <Link href="#work" passHref>
-            <ChevronDownIcon
-              className={`h-14 cursor-pointer transition-opacity opacity-30 animate-bounce p-2 ${
-                darkMode ? "text-white" : "text-black"
-              }`}
-            />
-          </Link>
-        </div> */}
       </div>
     </section>
   );
