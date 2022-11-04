@@ -3,7 +3,7 @@ export const JobsData = [
     position: "Web dev",
     place: {
       name: "luxoft",
-      url: "https://www.bosch.com/",
+      url: "https://www.luxoft.com/",
       label: `Go to luxoft's website`,
     },
     time: "April 2022 — Present",
@@ -13,7 +13,7 @@ export const JobsData = [
       {
         title: "UI modernization",
         details: `debugged and developed modules of a UI modernization project of a Canadian bank.`,
-        tags: ["Next.js"],
+        tags: ["Next.js", "Tailwind"],
       },
     ],
   },
@@ -31,14 +31,14 @@ export const JobsData = [
         title: "Metasocial Marketplace",
         details: `developed and debugged some of the UI/UX components and 
         pages implemented in the social nft marketplace.`,
-        tags: ["React.js"],
+        tags: ["React.js", "Tailwind"],
         externalRef: "https://v3.woonkly.com/",
       },
       {
         title: "Backoffice",
         details: `developed the first version of the internal backoffice. 
         Used React.js and Nest.js.`,
-        tags: ["React.js", "Nest.js", "Mongo DB"],
+        tags: ["React.js", "Tailwind", "Nest.js", "Mongo DB"],
       },
     ],
   },
@@ -66,7 +66,7 @@ export const JobsData = [
         details: `developed new
           modules and performed maintenance of a long term
           internal web-app with a 400k+ user base.`,
-          tags: ["Backbone.js", "jQuery", "SQL"],
+        tags: ["Backbone.js", "jQuery", "SQL"],
       },
       {
         title: "Level 3 support",
@@ -125,7 +125,7 @@ export const JobsData = [
         first version of the Aleate's current website
         proposing and implementing an interactive 3D environment
         to deliver an outstanding UX.`,
-        tags: ["JS · HTML · CSS", "SEO", "Three.js",],
+        tags: ["JS · HTML · CSS", "SEO", "Three.js"],
         externalRef: "https://www.aleate.com/",
       },
       {
@@ -150,18 +150,17 @@ export const JobsData = [
       "I have worked in some freelance projects, participating mainly as frontend web developeproject.",
     projects: [
       {
-        title: "Unisun's CRM",
-        details: `developed the 1st
-        version of an internal CRM for an online school to
-        manage the student base, its payment dues and organize
-        online classrooms.`,
-        tags: ["Angular 9", "Material Desing"],
+        title: "Grid's landing page V2",
+        details: `developed the
+        landing page of a Mexican software development company.`,
+        externalRef: "https://www.gridcompany.com.mx/",
+        tags: ["React.js", "Tailwind", "SEO"],
       },
       {
-        title: "Grid's landing page",
+        title: "Grid's landing page V1",
         details: `developed the
         landing page of a Mexican company in a very limited time
-        frame`,
+        frame.`,
         externalRef: "https://www.gridcompany.com.mx/",
         tags: ["JS · HTML · CSS", "SEO"],
       },
@@ -173,6 +172,14 @@ export const JobsData = [
         internationalization of 6 languages`,
         externalRef: "https://integreat.com/en/home",
         tags: ["Angular 11", "Material Desing", "i18n"],
+      },
+      {
+        title: "Unisun's CRM",
+        details: `developed the 1st
+        version of an internal CRM for an online school to
+        manage the student base, its payment dues and organize
+        online classrooms.`,
+        tags: ["Angular 9", "Material Desing"],
       },
     ],
     tags: ["React.js"],

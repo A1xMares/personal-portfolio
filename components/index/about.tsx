@@ -56,25 +56,19 @@ const About = ({ darkMode, showedArea }) => {
               }`}
             >
               <AnimationSequence showedArea={showedArea}>
-                <p className="mb-4 ">
+                <p className="mb-4 text-justify">
                   I always knew that I wanted to work on tech. My story starts
                   at the age of 15 when I wrote my first piece of code in the
-                  programming language Pascal and from there I only kept
+                  programming language &quot;Pascal&quot; and from there I only kept
                   learning until became a professional developer.
                 </p>
               </AnimationSequence>
               <AnimationSequence showedArea={showedArea}>
-                <p className="mb-4">
-                  After 3.5+ years of professional experience I have build large
+                <p className="mb-4 text-justify">
+                  After 4+ years of professional experience I have build large
                   web projects like ERP&apos;s and CRM&apos;s, stunning landing
                   pages having experience working in startups and large
                   corporations participating in multi-national teams.
-                </p>
-              </AnimationSequence>
-              <AnimationSequence showedArea={showedArea}>
-                <p className="">
-                  Also I&apos;m a frequent participant of all sort of hackathons
-                  organized in Guadalajara, MX.
                 </p>
               </AnimationSequence>
             </div>

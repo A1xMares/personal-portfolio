@@ -4,6 +4,7 @@ import Experience from "../components/index/experience";
 import Work from "../components/index/work";
 import Contact from "../components/index/contact";
 import Head from "next/head";
+import Footer from "../components/shared/footer";
 
 function HomePage({ darkMode, showedArea, scrollY }) {
   return (
@@ -63,8 +64,38 @@ function HomePage({ darkMode, showedArea, scrollY }) {
         <link rel="shortcut icon" href="/favicon.ico" />
       </Head>
       {/* Header */}
+      {/* Bottom animation */}
+      <div className="area">
+        <ul className="circles">
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
+
+      <div className="area2">
+        <ul className="circles">
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
+      {/* Intro component */}
       <div className="px-6 h-screen pb-20 flex items-center w-100 m-auto max-w-sm sm:max-w-xl xl:max-w-2xl">
-        {/* Intro component */}
         <Intro darkMode={darkMode} />
       </div>
       {/* About section */}
@@ -83,6 +114,8 @@ function HomePage({ darkMode, showedArea, scrollY }) {
       <div className="px-6 mb-40 m-auto max-w-sm sm:max-w-xl xl:max-w-2xl">
         <Contact darkMode={darkMode} showedArea={showedArea} />
       </div>
+      {/* FOOTER */}
+      <Footer />
     </>
   );
 }

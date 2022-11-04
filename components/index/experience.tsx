@@ -39,7 +39,7 @@ const Experience = ({ darkMode, showedArea }) => {
               return (
                 <div
                   className={`h-auto basis-1 transition-all duration-300 ease-out ${
-                    selected === index && index !== 0 ? "mt-2" : ""
+                    selected === index && index !== 0 ? "mt-4" : ""
                   }`}
                   id={job?.place?.name || job.position}
                   key={job?.place?.name || job.position}
@@ -98,14 +98,14 @@ const Experience = ({ darkMode, showedArea }) => {
                       </p>
                       {/* JOB DESCRIPTION */}
                       <p
-                        className={`text-base mt-2 ${
+                        className={`text-base mt-2 text-justify ${
                           selected === index ? "fadeInBottom" : "fadeInUnseen"
                         }`}
                       >
                         {job.description}
                       </p>
                       {/* JOB PROJECTS */}
-                      <ul className="arrow-list pl-8 mt-5">
+                      <ul className="arrow-list pl-4 mt-5">
                         {job.projects.map((project, i) => {
                           return (
                             <li
@@ -117,20 +117,20 @@ const Experience = ({ darkMode, showedArea }) => {
                               key={project.title}
                             >
                               {/* PROJECT DETAILS */}
-                              <p className="text-base text-justify">
+                              <p className="text-base ">
                                 {project.title && (
-                                  <strong>{project.title},</strong>
-                                )}{" "}
-                                {project.details}{" "}
+                                  <strong className="mr-1">{project.title},</strong>
+                                )}
+                                {project.details}
                               </p>
                               {/* PROJECT TAGS */}
                               <div className="flex items-center justify-between mt-2">
-                                <div className="flex gap-2 mr-4">
+                                <div className="flex gap-2 mr-4 flex-wrap">
                                   {project.tags &&
                                     project.tags.map((tag) => {
                                       return (
                                         <div
-                                          className={`px-2 h-5 rounded-full  font-semibold text-sm flex items-center ${darkMode ? "text-gray-200 border border-gray-400" : "text-gray-600 bg-gray-200"}`}
+                                          className={`px-2 h-5 rounded-full font-semibold text-sm flex items-center whitespace-nowrap ${darkMode ? "text-gray-200 border border-gray-400" : "text-gray-600 bg-gray-200"}`}
                                           key={tag}
                                         >
                                           {tag}
@@ -144,7 +144,7 @@ const Experience = ({ darkMode, showedArea }) => {
                                     target="_blank"
                                     rel="noreferrer"
                                     aria-label="View Project"
-                                    className="accent-2 font-semibold hover:!text-blue-600"
+                                    className="accent-2 font-semibold hover:!text-blue-600 whitespace-nowrap"
                                   >
                                     View Project
                                   </a>
@@ -179,7 +179,7 @@ const Experience = ({ darkMode, showedArea }) => {
                         <div>
                           {JobsData[index + 1] && (
                             <button
-                              className="flex items-center cursor-pointer px-2 group "
+                              className="flex items-center cursor-pointer group "
                               onClick={() => setSelected(selected + 1)}
                             >
                               <p className={darkMode ? "accent-1 " : "text-black "}>

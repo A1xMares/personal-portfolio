@@ -69,8 +69,7 @@ const Layout = ({
           mobileMenu={mobileMenu}
           setMobileMenu={handleMenu}
         ></Navbar>
-        <main className="overflow-hidden">{children}</main>
-        <Footer></Footer>
+        <main className="overflow-hidden relative">{children}</main>
       </div>
       <script
         type="application/ld+json"
