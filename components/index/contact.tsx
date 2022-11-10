@@ -20,7 +20,7 @@ const Contact = ({ darkMode, showedArea }) => {
         <AnimationSequence showedArea={showedArea}>
           <p className="">
             If you think I can help you or your organization, feel free to send
-            me an email. <br/> I will be answering soon.
+            me an email.  I will be answering soon.
           </p>
         </AnimationSequence>
         <div className="w-100 flex justify-center mt-9 mb-9">
