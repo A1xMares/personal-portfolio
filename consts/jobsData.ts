@@ -161,7 +161,6 @@ export const JobsData = [
         details: `developed the
         landing page of a Mexican company in a very limited time
         frame.`,
-        externalRef: "https://www.gridcompany.com.mx/",
         tags: ["JS · HTML · CSS", "SEO"],
       },
       {
