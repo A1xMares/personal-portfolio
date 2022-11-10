@@ -5,8 +5,8 @@ import {
 } from "@heroicons/react/solid";
 import { useState } from "react";
 
-const github = '/svgs/github.svg'
-const githubWhite = '/svgs/github-white.svg'
+const github = "/svgs/github.svg";
+const githubWhite = "/svgs/github-white.svg";
 
 const Card = ({ darkMode, project }) => {
   const [index, setIndex] = useState(0);
@@ -35,42 +35,56 @@ const Card = ({ darkMode, project }) => {
           darkMode ? "bg-gray-800" : "bg-gray-200"
         }`}
       >
-        <img src={project.gallery[index]} alt={project.title} className="card-img"/>
+        <img
+          src={project.gallery[index]}
+          alt={project.title}
+          className="card-img"
+        />
         <button
           className={`absolute left-3 -bottom-3 rounded-full disabled:shadow-none cursor-pointer disabled:cursor-default transition-all ease-out duration-500 ${
-            darkMode ? "bg-slate-600 disabled:bg-slate-800 shadow-xl" : "bg-white disabled:bg-gray-100 shadow-lg"  
+            darkMode
+              ? "bg-slate-600 disabled:bg-slate-800 shadow-xl"
+              : "bg-white disabled:bg-gray-100 shadow-lg"
           }`}
           onClick={() => handlePrev()}
           type="button"
           disabled={index === 0}
         >
           <ChevronLeftIcon
-            className={`h-6 opacity-100 ${darkMode ? 'text-gray-300' : 'accent-2'}`}
+            className={`h-6 opacity-100 ${
+              darkMode ? "text-gray-300" : "accent-2"
+            }`}
           />
         </button>
         <button
           className={`absolute right-3 -bottom-3 rounded-full  disabled:shadow-none cursor-pointer disabled:cursor-default transition-all ease-out duration-500 ${
-            darkMode ? "bg-slate-600 disabled:bg-slate-800 shadow-xl" : "bg-white disabled:bg-gray-100 shadow-lg"
+            darkMode
+              ? "bg-slate-600 disabled:bg-slate-800 shadow-xl"
+              : "bg-white disabled:bg-gray-100 shadow-lg"
           }`}
           onClick={() => handleNext()}
           type="button"
           disabled={index === project.gallery.length - 1}
         >
           <ChevronRightIcon
-            className={`h-6 opacity-100 ${darkMode ? 'text-gray-300' : 'accent-2'}`}
+            className={`h-6 opacity-100 ${
+              darkMode ? "text-gray-300" : "accent-2"
+            }`}
           />
         </button>
       </div>
       {/* Content */}
       <div className="pt-5 pb-5 px-4 flex flex-col justify-between grow">
-        <div className="grow h-full">
-          <div className="flex justify-between">
+        <div className="h-full">
+          <div className="flex items-center gap-2">
             <h3 className="font-bold text-lg accent-1">{project.title}</h3>
+            <h4 className="font- text-xs accent-2">({project.date})</h4>
           </div>
-          <p className="accent-2 text-xs">{project.date}</p>
-          <p className="mt-2 text-sm h-20">{project.description}</p>
-          <div className="mt-4">
-            <p className="text-xs font-bold">
+          {/*  */}
+          {/* <p className="text-xs accent-2 ">{project.date}</p> */}
+          {/*  */}
+          <div className="mt-2 font-bold">
+            <p className="text-xs accent-2">
               {project.tags.map((tag, index) => {
                 return (
                   <span key={index}>
@@ -81,8 +95,22 @@ const Card = ({ darkMode, project }) => {
               })}
             </p>
           </div>
+          {/*  */}
+          <p className="mt-2 text-sm grow">{project.description}</p>
         </div>
-        <div className="flex items-bottom justify-end">
+        <div className="flex items-bottom ">
+          {project.url !== "" && (
+            <a
+              href={project.url}
+              target="_blank"
+              rel="noreferrer"
+              aria-label={project.title}
+            >
+              <button className="mt-3 px-2 h-6 rounded-md text-xs font-semibold flex items-center whitespace-nowrap border border-gray-600 text-gray-600 dark:text-gray-300">
+                View Project
+              </button>
+            </a>
+          )}
           {project.githubLink !== "" && (
             <a
               href={project.githubLink}
@@ -96,16 +124,6 @@ const Card = ({ darkMode, project }) => {
                 alt="Github logo"
                 width={20}
                 height={20}
-              />
-            </a>
-          )}
-          {project.url !== "" && (
-            <a href={project.url} target="_blank" rel="noreferrer" aria-label={project.title}>
-              <ExternalLinkIcon
-                aria-label={project.title}
-                className={`h-6 ml-2 cursor-pointer transition-opacity ${
-                  darkMode ? "text-white" : "text-black"
-                }`}
               />
             </a>
           )}
