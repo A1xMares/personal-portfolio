@@ -150,25 +150,33 @@ export const JobsData = [
       "I have worked in some freelance projects, participating mainly as frontend web developeproject.",
     projects: [
       {
-        title: "Grid's landing page V2",
+        title: "Escala's website",
+        details: `developed the
+        website of a Mexican consulting company specialized in SAP 
+        implementing 8+ pages.`,
+        externalRef: "https://www.escalaconsulting.com.mx/",
+        tags: ["SvelteKit", "Tailwind", "SEO"],
+      },
+      {
+        title: "Adroit Overseas's website",
+        details: `developed the
+        website of an International agri processing and distribution company implementing 14+ pages.`,
+        externalRef: "https://adroitoverseas.com/",
+        tags: ["SvelteKit", "Tailwind", "SEO"],
+      },
+      {
+        title: "Grid's landing page V1 & V2",
         details: `developed the
         landing page of a Mexican software development company.`,
         externalRef: "https://www.gridcompany.com.mx/",
-        tags: ["React.js", "Tailwind", "SEO"],
-      },
-      {
-        title: "Grid's landing page V1",
-        details: `developed the
-        landing page of a Mexican company in a very limited time
-        frame.`,
-        tags: ["JS · HTML · CSS", "SEO"],
+        tags: ["Next.js", "Tailwind", "SEO"],
       },
       {
         title: "Integreat's website",
         details: `developed the
-        current website of an European consulting company,
-        developing 15+ pages and implementing
-        internationalization of 6 languages`,
+        website of an European consulting company,
+        implementing 15+ pages and
+        internationalization to manage 6 languages`,
         externalRef: "https://integreat.com/en/home",
         tags: ["Angular 11", "Material Desing", "i18n"],
       },

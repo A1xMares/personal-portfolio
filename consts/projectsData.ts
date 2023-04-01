@@ -1,10 +1,41 @@
 export const projectsData = [
   {
-    title: "Grid Landing V2",
+    title: "Escala Consulting",
+    date: "2023",
+    description:
+      "Website for a Mexican consulting company, implementing 8+ pages, a blog & a contact/register form. Backend with Amplify Studio & SendGrid",
+    tags: ["SvelteKit", "Tailwind", "SEO", "Amplify Studio"],
+    gallery: [
+      "/img/escala/page4.webp",
+      "/img/escala/page1.webp",
+      "/img/escala/page2.webp",
+      "/img/escala/page3.webp",
+      "/img/escala/page5.webp",
+    ],
+    githubLink: "",
+    url: "https://www.escalaconsulting.com.mx/",
+  },
+  {
+    title: "Adroit Overseas",
+    date: "2023",
+    description:
+      "Website of an International agri processing and distribution company implementing 14+ pages.",
+    tags: ["SvelteKit", "Tailwind", "SEO"],
+    gallery: [
+      "/img/adroit/page1.webp",
+      "/img/adroit/page2.webp",
+      "/img/adroit/page3.webp",
+      "/img/adroit/page4.webp",
+    ],
+    githubLink: "",
+    url: "https://adroitoverseas.com/",
+  },
+  {
+    title: "Grid Software",
     date: "2022",
     description:
       "Landing page of a Mexican software consulting company. It has four sections designed by myself.",
-    tags: ["React.js", "Tailwind", "SEO"],
+    tags: ["Next.js", "Tailwind", "SEO"],
     gallery: [
       "/img/grid/grid1.png",
       "/img/grid/grid2.png",
@@ -14,7 +45,7 @@ export const projectsData = [
     url: "https://www.gridcompany.com.mx/",
   },
   {
-    title: "Integreat Website",
+    title: "Integreat Consulting",
     date: "2021",
     description:
       "Website of an European consulting company. Manage internazionalization to 6 languages. 14+ pages.",
@@ -26,6 +57,20 @@ export const projectsData = [
     ],
     githubLink: "",
     url: "https://integreat.com/en/home",
+  },
+  {
+    title: "Aleate",
+    date: "2019",
+    description:
+      "Landing page of a Mexican software company. Stunning space environment in 3D. Vanilla javascript. Customrouter.",
+    tags: ["Three.js", "HTML", "CSS", "JS"],
+    gallery: [
+      "/img/aleate/aleate1-min.webp",
+      "/img/aleate/aleate2-min.webp",
+      "/img/aleate/aleate3-min.webp",
+    ],
+    githubLink: "",
+    url: "https://www.aleate.com/",
   },
   {
     title: "Adroit ERP",
@@ -57,34 +102,6 @@ export const projectsData = [
     url: "",
   },
   {
-    title: "Grid Landing V1",
-    date: "2020",
-    description:
-      "Landing page of a small Mexican software consulting company. Based and customized from a royalty free template. ",
-    tags: ["HTML", "CSS", "JS", "SEO"],
-    gallery: [
-      "/img/grid/grid1-min.webp",
-      "/img/grid/grid2-min.webp",
-      "/img/grid/grid3-min.webp",
-    ],
-    githubLink: "",
-    url: "",
-  },
-  {
-    title: "Aleate Website",
-    date: "2019",
-    description:
-      "Landing page of a Mexican software company. Stunning space environment in 3D. Vanilla javascript. Customrouter.",
-    tags: ["Three.js", "HTML", "CSS", "JS"],
-    gallery: [
-      "/img/aleate/aleate1-min.webp",
-      "/img/aleate/aleate2-min.webp",
-      "/img/aleate/aleate3-min.webp",
-    ],
-    githubLink: "",
-    url: "https://www.aleate.com/",
-  },
-  {
     title: "Adroit CRM",
     date: "2019",
     description:
@@ -103,7 +120,7 @@ export const projectsData = [
     date: "2018",
     description:
       "ERP to manage 7 departments. Focused in storage and payments. Extensive qty of cruds. Supply routes designer.",
-    tags: ["Angular 6", "Material",  "Google APIs"],
+    tags: ["Angular 6", "Material", "Google APIs"],
     gallery: [
       "/img/megadulces/megadulces1-min.webp",
       "/img/megadulces/megadulces2-min.webp",

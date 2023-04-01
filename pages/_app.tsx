@@ -4,7 +4,7 @@ import Layout from "../components/layout";
 import Script from "next/script";
 
 export default function App({ Component, pageProps }) {
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(true);
   const [scrollY, setScrollY] = useState(0);
   const [windowHeight, setWindowHeight] = useState(0);
   const [showedArea, setShowedArea] = useState([0, 0]);

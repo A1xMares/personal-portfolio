@@ -67,7 +67,7 @@ p {
 }
 
 .dark * p {
-  color: #b2b1b9;
+  color: #CBCBD0;
 }
 
 .dark * h1,
@@ -96,11 +96,11 @@ p {
 }
 
 .dark * .accent-1 {
-  color: #c996cc !important;
+  color: #DBB9DD !important;
 }
 
 .dark * .accent-2 {
-  color: #6e85b2 !important;
+  color: #8191d4 !important;
 }
 
 .dark * .bg-accent-1 {
