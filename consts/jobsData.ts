@@ -6,26 +6,31 @@ export const JobsData = [
       url: "https://www.luxoft.com/",
       label: `Go to luxoft's website`,
     },
-    time: "April 2022 — Present",
+    time: "Apr 2022 — Present",
     description:
       "Worked as a remote developer in a team managed from Ukraine using SCRUM methodology.",
     projects: [
       {
-        title: "UI modernization",
-        details: `debugged and developed modules of a UI modernization project of a Canadian bank.`,
+        title: "Network of Giving",
+        details: `currently working with argodesing a UI/UX specialized firm, modernizing old web apps, developing and implementing new features for the Network of Giving organization.`,
+        tags: ["Angular 15", "PrimeNG", "PrimeFlex"],
+      },
+      {
+        title: "CIBC Bank CRM UI modernization",
+        details: `debugged and developed UI modules of an extensive CRM currently implemented at CIBC Bank.`,
         tags: ["Next.js", "Tailwind"],
       },
     ],
   },
   {
-    position: "Freelance",
+    position: "Web dev",
     place: {
       name: "woonkly",
-      url: "https://woonklylabs.com/",
+      url: "https://woonkly.com/",
       label: `Go to woonkly's website`,
     },
-    time: "March 2022 — Present",
-    description: "I Work as a remote, part-time freelance developer.",
+    time: "Mar 2022 — Nov 2022",
+    description: "I worked as a remote, part-time freelance developer.",
     projects: [
       {
         title: "Metasocial Marketplace",
@@ -49,7 +54,7 @@ export const JobsData = [
       url: "https://www.bosch.com/",
       label: `Go to bosch's website`,
     },
-    time: "Sep 2020 — March 2022",
+    time: "Sep 2020 — Apr 2022",
     description:
       "Worked as a remote developer in a corporate IT team, managed from the USA using SCRUM methodology.",
     projects: [
@@ -144,13 +149,13 @@ export const JobsData = [
     ],
   },
   {
-    position: "Freelance",
-    time: "Jan 2019 — Jan 2022",
+    position: "Freelance projects",
+    time: "Jan 2019 — Mar 2023",
     description:
       "I have worked in some freelance projects, participating mainly as frontend web developeproject.",
     projects: [
       {
-        title: "Escala's website",
+        title: "Escala Consulting website",
         details: `developed the
         website of a Mexican consulting company specialized in SAP 
         implementing 8+ pages.`,
@@ -158,35 +163,35 @@ export const JobsData = [
         tags: ["SvelteKit", "Tailwind", "SEO"],
       },
       {
-        title: "Adroit Overseas's website",
+        title: "Adroit Overseas website",
         details: `developed the
         website of an International agri processing and distribution company implementing 14+ pages.`,
         externalRef: "https://adroitoverseas.com/",
         tags: ["SvelteKit", "Tailwind", "SEO"],
       },
       {
-        title: "Grid's landing page V1 & V2",
+        title: "Grid Software landing page",
         details: `developed the
         landing page of a Mexican software development company.`,
         externalRef: "https://www.gridcompany.com.mx/",
         tags: ["Next.js", "Tailwind", "SEO"],
       },
       {
-        title: "Integreat's website",
+        title: "Integreat Consulting website",
         details: `developed the
         website of an European consulting company,
         implementing 15+ pages and
         internationalization to manage 6 languages`,
         externalRef: "https://integreat.com/en/home",
-        tags: ["Angular 11", "Material Desing", "i18n"],
+        tags: ["Angular 11", "Material", "i18n"],
       },
       {
-        title: "Unisun's CRM",
+        title: "Unisun CRM",
         details: `developed the 1st
         version of an internal CRM for an online school to
         manage the student base, its payment dues and organize
         online classrooms.`,
-        tags: ["Angular 9", "Material Desing"],
+        tags: ["Angular 9", "Material"],
       },
     ],
     tags: ["React.js"],

@@ -59,8 +59,8 @@ const About = ({ darkMode, showedArea }) => {
                 <p className="mb-4 text-justify">
                   I always knew that I wanted to work on tech. My story starts
                   at the age of 15 when I wrote my first piece of code in the
-                  programming language &quot;Pascal&quot; and from there I only kept
-                  learning until became a professional developer.
+                  programming language &quot;Pascal&quot; and from there I only
+                  kept learning until became a professional developer.
                 </p>
               </AnimationSequence>
               <AnimationSequence showedArea={showedArea}>
@@ -114,6 +114,9 @@ const About = ({ darkMode, showedArea }) => {
                         <p className="text-base"> Next.js </p>
                       </li>
                       <li>
+                        <p className="text-base"> SvelteKit </p>
+                      </li>
+                      <li>
                         <p className="text-base"> jQuery </p>
                       </li>
                       <li>
@@ -137,10 +140,7 @@ const About = ({ darkMode, showedArea }) => {
                         <p className="text-base"> Express.js </p>
                       </li>
                       <li>
-                        <p className="text-base"> AWS Ec2 </p>
-                      </li>
-                      <li>
-                        <p className="text-base"> Ubuntu CLI </p>
+                        <p className="text-base"> AWS Platform </p>
                       </li>
                     </ul>
                     <ul className="arrow-list pl-5 ml-6 sm:ml-2 lg:ml-6 xl:ml-8">
@@ -149,9 +149,6 @@ const About = ({ darkMode, showedArea }) => {
                       </li>
                       <li>
                         <p className="text-base"> SQL query </p>
-                      </li>
-                      <li>
-                        <p className="text-base"> json / xml </p>
                       </li>
                       <li>
                         <p className="text-base"> NgInx </p>
