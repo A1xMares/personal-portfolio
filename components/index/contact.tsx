@@ -26,7 +26,7 @@ const Contact = ({ darkMode, showedArea }) => {
         <div className="w-100 flex justify-center mt-9 mb-9">
           <AnimationSequence showedArea={showedArea}>
             <a
-              href="mailto:aljorc16@gmail.com?subject=Hello"
+              href="mailto:hello@alxmares.com?subject=Hi, I saw your website and ..."
               target="_blank"
               rel="noreferrer"
               aria-label="Email me"
