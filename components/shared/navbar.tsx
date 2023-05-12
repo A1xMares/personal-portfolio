@@ -120,7 +120,7 @@ const Navbar = ({
             </h2>
           </Link>
           <a
-            href="https://drive.google.com/file/d/11pjt1DL2hqy1ah2UZU2Sv_D2Y1dSZPno/view?usp=share_link"
+            href="https://drive.google.com/file/d/1gbM3KakPe4ZQv5aJeMXtAo3wlwY4DfOP/view?usp=share_link"
             target="_blank"
             rel="noreferrer"
             aria-label="Resume link"
