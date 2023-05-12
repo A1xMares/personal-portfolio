@@ -181,7 +181,7 @@ const About = ({ darkMode, showedArea }) => {
           <div className="w-100 flex justify-center mr-4 lg:mr-0 mt-4 lg:ml-9">
             <AnimationSequence showedArea={showedArea}>
               <a
-                href="https://drive.google.com/file/d/1tusWA4O10eeyqRBZ_SZnxgLqBfQWadHR/view?usp=sharing"
+                href="https://drive.google.com/file/d/17sPb-NG8CitaBOfwclJCy7hP4ZqzwyX3/view?usp=share_link"
                 target="_blank"
                 rel="noreferrer"
                 aria-label="Resume link"
