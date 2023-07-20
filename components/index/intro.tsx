@@ -11,16 +11,16 @@ const Intro = ({ darkMode }) => {
     <section className="grow" id="home">
       {/* Introduction */}
       <h1
-        className={`accent-1 text-4xl md:text-2xl mb-6 md:mb-1 fadeInBottom delay-1 ${
+        className={`accent-1 text-3xl md:text-2xl mb-6 md:mb-1 fadeInBottom delay-1 ${
           !darkMode ? "font-bold" : ""
         }`}
       >
         Hello, my name is
       </h1>
-      <h2 className="font-bold text-7xl md:text-6xl mb-8 md:mb-6 fadeInBottom delay-1">
+      <h2 className="font-bold text-6xl mb-8 md:mb-6 fadeInBottom delay-1">
         Alejandro Mares
       </h2>
-      <h3 className="accent-2 text-5xl md:text-4xl mb-12 fadeInBottom delay-2">
+      <h3 className="accent-2 text-4xl md:text-4xl mb-12 fadeInBottom delay-2">
         I&apos;m a Web Developer.
       </h3>
       {/* Buttons row */}

@@ -5,6 +5,7 @@ import Work from "../components/index/work";
 import Contact from "../components/index/contact";
 import Head from "next/head";
 import Footer from "../components/shared/footer";
+import AnimationSequence from "../components/helpers/animationSequence";
 
 function HomePage({ darkMode, showedArea, scrollY }) {
   return (
@@ -63,53 +64,47 @@ function HomePage({ darkMode, showedArea, scrollY }) {
         ></meta>
         <link rel="shortcut icon" href="/favicon.ico" />
       </Head>
-      {/* Header */}
-      {/* Bottom animation */}
-      <div className="area">
-        <ul className="circles">
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-        </ul>
+
+      {/* Intro component */}
+      <div className="px-6 h-screen w-screen md:pb-20 flex items-center relative">
+        <div className="max-w-sm sm:max-w-xl xl:max-w-2xl m-auto w-full pb-20">
+          <Intro darkMode={darkMode} />
+        </div>
+        <div className="fadeIn delay-5">
+          <div className="bg-gradient bg-gradient-1"></div>
+        </div>
       </div>
 
-      <div className="area2">
-        <ul className="circles">
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-        </ul>
-      </div>
-      {/* Intro component */}
-      <div className="px-6 h-screen pb-20 flex items-center w-100 m-auto max-w-sm sm:max-w-xl xl:max-w-2xl">
-        <Intro darkMode={darkMode} />
-      </div>
       {/* About section */}
-      <div className="px-6 mb-20 sm:mb-32 m-auto max-w-sm sm:max-w-xl xl:max-w-2xl">
-        <About darkMode={darkMode} showedArea={showedArea} />
+      <div className="px-6 mb-20 sm:mb-32 w-screen relative">
+        <div className="m-auto max-w-sm sm:max-w-xl xl:max-w-2xl">
+          <About darkMode={darkMode} showedArea={showedArea} />
+        </div>
+        <AnimationSequence showedArea={showedArea}>
+          <div className="bg-gradient bg-gradient-2 "></div>
+        </AnimationSequence>
       </div>
+
       {/* Experience section */}
-      <div className="px-6 mb-10 sm:mb-32 m-auto max-w-sm sm:max-w-xl xl:max-w-2xl">
-        <Experience darkMode={darkMode} showedArea={showedArea} />
+      <div className="px-6 mb-10 sm:mb-32 w-screen relative">
+        <div className="m-auto max-w-sm sm:max-w-xl xl:max-w-2xl">
+          <Experience darkMode={darkMode} showedArea={showedArea} />
+        </div>
+        <AnimationSequence showedArea={showedArea}>
+          <div className="bg-gradient bg-gradient-3"></div>
+        </AnimationSequence>
       </div>
+
       {/* Work section */}
-      <div className="px-6 mb-10 sm:mb-32 m-auto max-w-sm sm:max-w-xl xl:max-w-2xl">
-        <Work darkMode={darkMode} showedArea={showedArea} />
+      <div className="px-6 mb-10 sm:mb-32 w-screen relative">
+        <div className="m-auto max-w-sm sm:max-w-xl xl:max-w-2xl">
+          <Work darkMode={darkMode} showedArea={showedArea} />
+        </div>
+        <AnimationSequence showedArea={showedArea}>
+          <div className="bg-gradient bg-gradient-4 "></div>
+        </AnimationSequence>
       </div>
+
       {/* Contact section */}
       <div className="px-6 mb-40 m-auto max-w-sm sm:max-w-xl xl:max-w-2xl">
         <Contact darkMode={darkMode} showedArea={showedArea} />

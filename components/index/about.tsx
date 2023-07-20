@@ -7,7 +7,7 @@ const About = ({ darkMode, showedArea }) => {
   const [selectedTab, setSelectedTab] = useState(0);
 
   return (
-    <section id="about" className="pt-28 -mt-28 relative">
+    <section id="about" className="pt-28 relative">
       {/* About me subtitle */}
       <div className="flex items-center mb-6">
         <AnimationSequence showedArea={showedArea}>
