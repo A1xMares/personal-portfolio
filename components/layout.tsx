@@ -34,7 +34,7 @@ const schemaPerson = {
     "https://www.linkedin.com/in/alejandro-mares/",
     "https://github.com/A1xMares",
   ],
-  jobTitle: "Full Stack Web Developer",
+  jobTitle: "Web Developer",
 };
 
 const Layout = ({

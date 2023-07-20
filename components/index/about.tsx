@@ -15,7 +15,7 @@ const About = ({ darkMode, showedArea }) => {
         </AnimationSequence>
       </div>
       {/* Content container */}
-      <div className="pl-8 pr-6 sm:pr-0 relative lg:flex">
+      <div className="relative lg:flex">
         {/* Tabs container */}
         <div className="grow">
           {/* Tabs selector */}

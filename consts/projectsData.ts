@@ -1,10 +1,10 @@
 export const projectsData = [
   {
-    title: "Escala Consulting",
+    title: "Escala",
     date: "2023",
     description:
-      "Website for a Mexican consulting company, implementing 8+ pages, a blog & a contact/register form. Backend with Amplify Studio & SendGrid",
-    tags: ["SvelteKit", "Tailwind", "SEO", "Amplify Studio"],
+      "Website for a Mexican consulting company, implementing 8+ pages, a blog & a contact/register form. Amplify Studio & SendGrid",
+    tags: ["SvelteKit", "Tailwind", "SEO", "Amplify"],
     gallery: [
       "/img/escala/page4.webp",
       "/img/escala/page1.webp",
@@ -45,7 +45,7 @@ export const projectsData = [
     url: "https://www.gridcompany.com.mx/",
   },
   {
-    title: "Integreat Consulting",
+    title: "Integreat",
     date: "2021",
     description:
       "Website of an European consulting company. Manage internazionalization to 6 languages. 14+ pages.",

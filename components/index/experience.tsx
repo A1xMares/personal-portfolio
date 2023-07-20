@@ -32,54 +32,60 @@ const Experience = ({ darkMode, showedArea }) => {
         </AnimationSequence>
       </div>
 
-      <div className="pl-10 pt-4 relative">
+      <div className="-ml-2 pt-2 relative">
         <AnimationSequence showedArea={showedArea}>
           <div className="flex justify-start flex-col  box-border	">
             {JobsData.map((job, index) => {
               return (
                 <div
                   className={`h-auto basis-1 transition-all duration-300 ease-out ${
-                    selected === index && index !== 0 ? "mt-4" : ""
+                    selected === index && index !== 0 ? "" : ""
                   }`}
                   id={job?.place?.name || job.position}
                   key={job?.place?.name || job.position}
                 >
                   {/* JOB HEADER */}
-                  <h3
+                  <button
                     onClick={() => handleSelected(index)}
-                    className={` cursor-pointer flex -ml-9 ${
-                      selected === index
-                        ? "font-bold text-3xl h-12"
-                        : "text-2xl h-9"
-                    }`}
+                    className={`${selected === index ? 'mb-4' : 'mb-6'}`}
                   >
-                    <ChevronDownIcon
-                      className={`h-6 w-8 mt-1 transition-all p-0 duration-300 ${
-                        darkMode
-                          ? selected === index
-                            ? "text-white "
-                            : "text-gray-100 "
-                          : selected === index
-                          ? "text-black "
-                          : "text-gray-400 "
-                      }${selected !== index && "-rotate-90"}`}
-                    />
-                    {job.position} {job.place && "at"}
-                    {job.place && (
-                      <a
-                        href={job.place.url}
-                        target="_blank"
-                        rel="noreferrer"
-                        aria-label={job.place.label}
-                        className="underline hover:!text-blue-600 ml-1"
-                      >
-                        {job.place.name}
-                      </a>
-                    )}
-                  </h3>
+                    <h3
+                      className={` cursor-pointer flex text-2xl ${
+                        selected === index ? "font-normal" : "font-normal"
+                      }`}
+                    >
+                      <ChevronDownIcon
+                        className={`h-6 w-8 mt-1 transition-all p-0 duration-300 ${
+                          darkMode
+                            ? selected === index
+                              ? "text-white "
+                              : "text-gray-500 "
+                            : selected === index
+                            ? "text-gray-600 "
+                            : "text-gray-400 "
+                        }${selected !== index && "-rotate-90"}`}
+                      />
+                      {job.position} {job.place && "@"}
+                      {job.place && (
+                        <a
+                          href={job.place.url}
+                          target="_blank"
+                          rel="noreferrer"
+                          aria-label={job.place.label}
+                          className={`underline font-bold hover:!text-blue-600 ml-2 font- ${darkMode ? 'text-gray-100' : 'text-slate-600'}`}
+                        >
+                          {job.place.name}
+                        </a>
+                      )}
+                    </h3>
+                    <p className="text-sm accent-2 font-semibold text-left pl-9">
+                      {job.time}
+                    </p>
+                  </button>
+
                   {/* JOB BODY CONTENT */}
                   <div
-                    className={`pb-9 ${
+                    className={`pb-8 ${
                       selected === index ? "" : "absolute hidden"
                     }`}
                   >
@@ -88,28 +94,24 @@ const Experience = ({ darkMode, showedArea }) => {
                         selected === index ? "h-auto" : "h-0 overflow-hidden"
                       }`}
                     >
-                      {/* JOB TIME FRAME */}
-                      <p
-                        className={`text-sm accent-1 font-semibold  ${
-                          selected === index ? "fadeInBottom" : "fadeInUnseen"
-                        }`}
-                      >
-                        {job.time}
-                      </p>
                       {/* JOB DESCRIPTION */}
-                      <p
+                      {/* <p
                         className={`text-base mt-2 text-justify ${
                           selected === index ? "fadeInBottom" : "fadeInUnseen"
                         }`}
                       >
                         {job.description}
-                      </p>
+                      </p> */}
                       {/* JOB PROJECTS */}
-                      <ul className="arrow-list pl-4 mt-5">
+                      <ul
+                        className={`arrow-list ml-4 pl-5 border-l ${
+                          darkMode ? "border-gray-700" : "border-gray-300"
+                        }`}
+                      >
                         {job.projects.map((project, i) => {
                           return (
                             <li
-                              className={` mb-5 ${
+                              className={` mb-5 last:mb-0 ${
                                 selected === index
                                   ? "fadeInBottom"
                                   : "fadeInUnseen"
@@ -119,7 +121,13 @@ const Experience = ({ darkMode, showedArea }) => {
                               {/* PROJECT DETAILS */}
                               <p className="text-base ">
                                 {project.title && (
-                                  <strong className="mr-1">{project.title},</strong>
+                                  <strong
+                                    className={` mr-1 ${
+                                      darkMode ? "text-white" : ""
+                                    }`}
+                                  >
+                                    {project.title},
+                                  </strong>
                                 )}
                                 {project.details}
                               </p>
@@ -130,7 +138,11 @@ const Experience = ({ darkMode, showedArea }) => {
                                     project.tags.map((tag) => {
                                       return (
                                         <div
-                                          className={`px-2 h-5 rounded-full font-semibold text-sm flex items-center whitespace-nowrap ${darkMode ? "text-gray-200 border border-gray-400" : "text-gray-600 bg-gray-200"}`}
+                                          className={`px-2 h-5 rounded-full font-semibold text-xs md:text-sm flex items-center whitespace-nowrap ${
+                                            darkMode
+                                              ? "text-gray-300 border border-gray-500"
+                                              : "text-gray-700 bg-gray-200"
+                                          }`}
                                           key={tag}
                                         >
                                           {tag}
@@ -144,7 +156,7 @@ const Experience = ({ darkMode, showedArea }) => {
                                     target="_blank"
                                     rel="noreferrer"
                                     aria-label="View Project"
-                                    className="accent-2 font-semibold hover:!text-blue-600 whitespace-nowrap"
+                                    className="accent-1 font-semibold hover:!text-blue-600 whitespace-nowrap"
                                   >
                                     View Project
                                   </a>
@@ -156,7 +168,7 @@ const Experience = ({ darkMode, showedArea }) => {
                       </ul>
                       {/* PREV - NEXT BUTTONS */}
                       <div
-                        className={`flex justify-end items-center mt-6 fadeInBottom`}
+                        className={`flex justify-end items-center mt-4 fadeInBottom`}
                       >
                         <div>
                           {JobsData[index - 1] && (
@@ -165,11 +177,19 @@ const Experience = ({ darkMode, showedArea }) => {
                               onClick={() => setSelected(selected - 1)}
                             >
                               <ArrowNarrowLeftIcon
-                                className={`w-5 mr-1 ${
-                                  darkMode ? "accent-1 " : "text-black "
+                                className={`w-5 transition-all mr-1 group-hover:mr-2 ${
+                                  darkMode
+                                    ? "accent-1 "
+                                    : "text-black font-semibold"
                                 }`}
                               />
-                              <p className={darkMode ? "accent-1 " : "text-black "}>
+                              <p
+                                className={`underline underline-offset-4 pb-1 transition-all group-hover:mr-1 ${
+                                  darkMode
+                                    ? "accent-1 "
+                                    : "text-black font-semibold"
+                                }`}
+                              >
                                 {JobsData[index - 1].place?.name ||
                                   JobsData[index - 1].position}
                               </p>
@@ -182,13 +202,21 @@ const Experience = ({ darkMode, showedArea }) => {
                               className="flex items-center cursor-pointer group "
                               onClick={() => setSelected(selected + 1)}
                             >
-                              <p className={darkMode ? "accent-1 " : "text-black "}>
+                              <p
+                                className={`underline underline-offset-4 pb-1 ${
+                                  darkMode
+                                    ? "accent-1 "
+                                    : "text-black font-semibold"
+                                }`}
+                              >
                                 {JobsData[index + 1].place?.name ||
                                   JobsData[index + 1].position}
                               </p>
                               <ArrowNarrowRightIcon
-                                className={`w-5 ml-1 ${
-                                  darkMode ? "accent-1 " : "text-black "
+                                className={`w-5 transition-all ml-1 group-hover:ml-2 ${
+                                  darkMode
+                                    ? "accent-1 "
+                                    : "text-black font-semibold"
                                 }`}
                               />
                             </button>

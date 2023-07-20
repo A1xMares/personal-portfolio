@@ -2,7 +2,7 @@ export const JobsData = [
   {
     position: "Web dev",
     place: {
-      name: "luxoft",
+      name: "Luxoft",
       url: "https://www.luxoft.com/",
       label: `Go to luxoft's website`,
     },
@@ -25,7 +25,7 @@ export const JobsData = [
   {
     position: "Web dev",
     place: {
-      name: "woonkly",
+      name: "Woonkly",
       url: "https://woonkly.com/",
       label: `Go to woonkly's website`,
     },
@@ -50,7 +50,7 @@ export const JobsData = [
   {
     position: "Web dev",
     place: {
-      name: "bosch",
+      name: "Bosch",
       url: "https://www.bosch.com/",
       label: `Go to bosch's website`,
     },
@@ -83,7 +83,7 @@ export const JobsData = [
   {
     position: "Web dev",
     place: {
-      name: "adroit",
+      name: "Adroit",
       url: "https://adroitoverseas.com/",
       label: `Go to adroit's website`,
     },
@@ -116,7 +116,7 @@ export const JobsData = [
   {
     position: "Web dev",
     place: {
-      name: "aleate",
+      name: "Aleate",
       url: "https://www.aleate.com/",
       label: `Go to aleate's website`,
     },
