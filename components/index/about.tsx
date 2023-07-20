@@ -65,10 +65,11 @@ const About = ({ darkMode, showedArea }) => {
               </AnimationSequence>
               <AnimationSequence showedArea={showedArea}>
                 <p className="mb-4 text-justify">
-                  After 4+ years of professional experience I have build large
-                  web projects like ERP&apos;s and CRM&apos;s, stunning landing
-                  pages having experience working in startups and large
-                  corporations participating in multi-national teams.
+                  After 5 years of professional experience I&apos;ve built web
+                  apps for corporate IT, asset management, specific business
+                  tools, ERPs, CRMs and landing pages having experience working
+                  in startups and large corporations participating in
+                  international remote teams.
                 </p>
               </AnimationSequence>
             </div>
@@ -181,7 +182,7 @@ const About = ({ darkMode, showedArea }) => {
           <div className="w-100 flex justify-center mr-4 lg:mr-0 mt-4 lg:ml-9">
             <AnimationSequence showedArea={showedArea}>
               <a
-                href="https://drive.google.com/file/d/1gbM3KakPe4ZQv5aJeMXtAo3wlwY4DfOP/view?usp=share_link"
+                href="https://drive.google.com/file/d/1P9dwGfbDdXJ3vIHFzcAgFNAGPdQ7eNji/view"
                 target="_blank"
                 rel="noreferrer"
                 aria-label="Resume link"
