@@ -1,10 +1,10 @@
 import BtnPrimary from "../../components/shared/btn-primary";
 import Link from "next/link";
 import { ChevronDownIcon } from "@heroicons/react/solid";
-const linkedin = '/svgs/linkedin.svg'
-const linkedinWhite = '/svgs/linkedin-white.svg'
-const github = '/svgs/github.svg'
-const githubWhite = '/svgs/github-white.svg'
+const linkedin = "/svgs/linkedin.svg";
+const linkedinWhite = "/svgs/linkedin-white.svg";
+const github = "/svgs/github.svg";
+const githubWhite = "/svgs/github-white.svg";
 
 const Intro = ({ darkMode }) => {
   return (
@@ -26,54 +26,50 @@ const Intro = ({ darkMode }) => {
       {/* Buttons row */}
       <div className="flex items-center fadeInBottom delay-3 relative">
         <Link href="#work" passHref aria-label="Work section">
-          <div>
-            <BtnPrimary darkMode={darkMode} className="">
-              Check out my work
-            </BtnPrimary>
-          </div>
+          <BtnPrimary darkMode={darkMode} className="">
+            Check out my work
+          </BtnPrimary>
         </Link>
-        <button className="flex justify-center p-2 ml-4" aria-label="Open linkedin">
-          <a
-            href="https://www.linkedin.com/in/alejandro-mares/"
-            target="_blank"
-            aria-label="Go to linkedin"
-            rel="noreferrer"
-          >
-            <img
-              src={darkMode ? linkedinWhite : linkedin}
-              alt="Linkedin logo"
-              width={26}
-              height={26}
-              className="transition-opacity	opacity-70 hover:opacity-100 duration-500"
-            />
-          </a>
-        </button>
-        <button className="flex justify-center p-2" aria-label="Open github">
-          <a
-            href="https://github.com/A1xMares"
-            target="_blank"
-            aria-label="Go to github"
-            rel="noreferrer"
-          >
-            <img
-              src={darkMode ? githubWhite : github}
-              alt="Github logo"
-              width={24}
-              height={24}
-              className="transition-opacity	opacity-70 hover:opacity-100 duration-300"
-            />
-          </a>
-        </button>
+        <a
+          href="https://www.linkedin.com/in/alejandro-mares/"
+          target="_blank"
+          aria-label="Go to linkedin"
+          rel="noreferrer"
+          className="flex justify-center p-2 ml-4 transition-opacity opacity-60 hover:opacity-100"
+        >
+          <img
+            src={darkMode ? linkedinWhite : linkedin}
+            alt="Linkedin logo"
+            width={26}
+            height={26}
+            className=""
+          />
+        </a>
+        <a
+          href="https://github.com/A1xMares"
+          target="_blank"
+          aria-label="Go to github"
+          rel="noreferrer"
+          className="flex justify-center p-2 transition-opacity	opacity-60 hover:opacity-100"
+        >
+          <img
+            src={darkMode ? githubWhite : github}
+            alt="Github logo"
+            width={24}
+            height={24}
+            className=""
+          />
+        </a>
         {/* Scroll indicator */}
-        <div className="absolute left-0 right-0 flex justify-center -bottom-40">
-          <Link href="#about" passHref aria-label="About section">
+        <Link href="#about" passHref aria-label="About section">
+          <div className="absolute left-0 right-0 flex justify-center -bottom-40 cursor-pointer">
             <ChevronDownIcon
-              className={`h-14 cursor-pointer transition-opacity opacity-30 animate-bounce p-2 ${
+              className={`h-14 transition-opacity opacity-60 animate-bounce p-2 ${
                 darkMode ? "text-white" : "text-black"
               }`}
             />
-          </Link>
-        </div>
+          </div>
+        </Link>
       </div>
     </section>
   );

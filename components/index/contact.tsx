@@ -16,7 +16,7 @@ const Contact = ({ darkMode, showedArea }) => {
         </AnimationSequence>
       </div>
       {/* Content container */}
-      <div className="pl-8">
+      <div className="">
         <AnimationSequence showedArea={showedArea}>
           <p className="">
             If you think I can help you or your organization, feel free to send

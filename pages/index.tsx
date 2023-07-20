@@ -99,15 +99,15 @@ function HomePage({ darkMode, showedArea, scrollY }) {
         <Intro darkMode={darkMode} />
       </div>
       {/* About section */}
-      <div className="px-6 mb-20 sm:mb-48 m-auto max-w-sm sm:max-w-xl xl:max-w-2xl">
+      <div className="px-6 mb-20 sm:mb-32 m-auto max-w-sm sm:max-w-xl xl:max-w-2xl">
         <About darkMode={darkMode} showedArea={showedArea} />
       </div>
       {/* Experience section */}
-      <div className="px-6 mb-10 sm:mb-40 m-auto max-w-sm sm:max-w-xl xl:max-w-2xl">
+      <div className="px-6 mb-10 sm:mb-32 m-auto max-w-sm sm:max-w-xl xl:max-w-2xl">
         <Experience darkMode={darkMode} showedArea={showedArea} />
       </div>
       {/* Work section */}
-      <div className="px-6 mb-10 sm:mb-40 m-auto max-w-sm sm:max-w-xl xl:max-w-2xl">
+      <div className="px-6 mb-10 sm:mb-32 m-auto max-w-sm sm:max-w-xl xl:max-w-2xl">
         <Work darkMode={darkMode} showedArea={showedArea} />
       </div>
       {/* Contact section */}
