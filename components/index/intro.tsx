@@ -26,9 +26,11 @@ const Intro = ({ darkMode }) => {
       {/* Buttons row */}
       <div className="flex items-center fadeInBottom delay-3 relative">
         <Link href="#work" passHref aria-label="Work section">
-          <BtnPrimary darkMode={darkMode} className="">
-            Check out my work
-          </BtnPrimary>
+          <div>
+            <BtnPrimary darkMode={darkMode} className="">
+              Check out my work
+            </BtnPrimary>
+          </div>
         </Link>
         <a
           href="https://www.linkedin.com/in/alejandro-mares/"

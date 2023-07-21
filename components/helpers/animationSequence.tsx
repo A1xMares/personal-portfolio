@@ -1,6 +1,18 @@
 import { useEffect, useRef, useState } from "react";
 
-const AnimationSequence = ({ children, showedArea }) => {
+interface AnimationSequenceProps {
+  children: any;
+  showedArea: any;
+  animation?: string;
+  parentClass?: string;
+}
+
+const AnimationSequence = ({
+  children,
+  showedArea,
+  animation,
+  parentClass,
+}: AnimationSequenceProps) => {
   const [animationState, setAnimationState] = useState(false);
   const elRef = useRef<HTMLDivElement>(null);
 
@@ -12,7 +24,13 @@ const AnimationSequence = ({ children, showedArea }) => {
   return (
     <div
       ref={elRef}
-      className={`delay-3 ${animationState ? "fadeInBottom" : "fadeInUnseen"}`}
+      className={`delay-3 ${parentClass ? parentClass : ""} ${
+        animationState
+          ? animation
+            ? animation
+            : "fadeInBottom"
+          : "fadeInUnseen"
+      }`}
     >
       {children}
     </div>

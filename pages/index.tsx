@@ -70,9 +70,7 @@ function HomePage({ darkMode, showedArea, scrollY }) {
         <div className="max-w-sm sm:max-w-xl xl:max-w-2xl m-auto w-full pb-20">
           <Intro darkMode={darkMode} />
         </div>
-        <div className="fadeIn delay-5">
-          <div className="bg-gradient bg-gradient-1"></div>
-        </div>
+        <div className="fadeIn delay-5 bg-gradient bg-gradient-1"></div>
       </div>
 
       {/* About section */}
@@ -80,8 +78,12 @@ function HomePage({ darkMode, showedArea, scrollY }) {
         <div className="m-auto max-w-sm sm:max-w-xl xl:max-w-2xl">
           <About darkMode={darkMode} showedArea={showedArea} />
         </div>
-        <AnimationSequence showedArea={showedArea}>
-          <div className="bg-gradient bg-gradient-2 "></div>
+        <AnimationSequence
+          showedArea={showedArea}
+          animation="gradient-container"
+          parentClass="relative"
+        >
+          <div className="hidden bg-gradient bg-gradient-2 fadeIn delay-5"></div>
         </AnimationSequence>
       </div>
 
@@ -90,8 +92,12 @@ function HomePage({ darkMode, showedArea, scrollY }) {
         <div className="m-auto max-w-sm sm:max-w-xl xl:max-w-2xl">
           <Experience darkMode={darkMode} showedArea={showedArea} />
         </div>
-        <AnimationSequence showedArea={showedArea}>
-          <div className="bg-gradient bg-gradient-3"></div>
+        <AnimationSequence
+          showedArea={showedArea}
+          animation="gradient-container"
+          parentClass="relative"
+        >
+          <div className="hidden bg-gradient bg-gradient-3 fadeIn delay-5"></div>
         </AnimationSequence>
       </div>
 
@@ -100,8 +106,12 @@ function HomePage({ darkMode, showedArea, scrollY }) {
         <div className="m-auto max-w-sm sm:max-w-xl xl:max-w-2xl">
           <Work darkMode={darkMode} showedArea={showedArea} />
         </div>
-        <AnimationSequence showedArea={showedArea}>
-          <div className="bg-gradient bg-gradient-4 "></div>
+        <AnimationSequence
+          showedArea={showedArea}
+          animation="gradient-container"
+          parentClass="relative"
+        >
+          <div className="hidden bg-gradient bg-gradient-4 fadeIn delay-5"></div>
         </AnimationSequence>
       </div>
 
