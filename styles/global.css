@@ -383,19 +383,17 @@ li::marker {
 }
 
 .bg-gradient {
-  filter: blur(calc(calc(50vh + 50vw) / 7.5));
+  display: none;
+  filter: blur(calc(calc(50vh + 50vw) / 8.5)) !important;
   border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
   position: absolute;
   z-index: 0;
   pointer-events: none;
 }
 
-.dark * .bg-gradient {
-}
-
-@media (min-width: 640px) {
+@media (min-width: 962px) {
   .dark * .bg-gradient {
-    filter: blur(calc(calc(50vh + 50vw) / 8.5)) !important;
+    display: block;
   }
 }
 
@@ -405,7 +403,6 @@ li::marker {
   height: 20vh;
   top: 5vh;
   right: 15vw;
-  /* transform: rotate(deg); */
 }
 
 .dark * .bg-gradient-2 {
@@ -415,7 +412,6 @@ li::marker {
   height: 50vh;
   top: 25%;
   right: 40vw;
-  /* transform: rotate(-65deg); */
 }
 
 .dark * .bg-gradient-3 {
@@ -423,7 +419,6 @@ li::marker {
   height: 100vh;
   top: 25%;
   right: 35vw;
-  /* transform: rotate(65deg); */
 }
 
 .dark * .bg-gradient-4 {
