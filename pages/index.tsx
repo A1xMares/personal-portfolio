@@ -70,54 +70,38 @@ function HomePage({ darkMode, showedArea, scrollY }) {
         <div className="max-w-sm sm:max-w-xl xl:max-w-2xl m-auto w-full pb-20">
           <Intro darkMode={darkMode} />
         </div>
-        <div className="fadeIn delay-5 bg-gradient bg-gradient-1"></div>
       </div>
 
       {/* About section */}
       <div className="px-6 mb-20 sm:mb-32 w-screen relative">
+        <div className="fadeIn delay-5 bg-gradient bg-gradient-1"></div>
         <div className="m-auto max-w-sm sm:max-w-xl xl:max-w-2xl">
           <About darkMode={darkMode} showedArea={showedArea} />
         </div>
-        <AnimationSequence
-          showedArea={showedArea}
-          animation="gradient-container"
-          parentClass="relative"
-        >
-          <div className="hidden bg-gradient bg-gradient-2 fadeIn delay-5"></div>
-        </AnimationSequence>
       </div>
 
       {/* Experience section */}
       <div className="px-6 mb-10 sm:mb-32 w-screen relative">
+        <div className="bg-gradient bg-gradient-2 fadeIn delay-5"></div>
         <div className="m-auto max-w-sm sm:max-w-xl xl:max-w-2xl">
           <Experience darkMode={darkMode} showedArea={showedArea} />
         </div>
-        <AnimationSequence
-          showedArea={showedArea}
-          animation="gradient-container"
-          parentClass="relative"
-        >
-          <div className="hidden bg-gradient bg-gradient-3 fadeIn delay-5"></div>
-        </AnimationSequence>
       </div>
 
       {/* Work section */}
       <div className="px-6 mb-10 sm:mb-32 w-screen relative">
+        <div className="bg-gradient bg-gradient-3 fadeIn delay-5"></div>
         <div className="m-auto max-w-sm sm:max-w-xl xl:max-w-2xl">
           <Work darkMode={darkMode} showedArea={showedArea} />
         </div>
-        <AnimationSequence
-          showedArea={showedArea}
-          animation="gradient-container"
-          parentClass="relative"
-        >
-          <div className="hidden bg-gradient bg-gradient-4 fadeIn delay-5"></div>
-        </AnimationSequence>
       </div>
 
       {/* Contact section */}
-      <div className="px-6 mb-40 m-auto max-w-sm sm:max-w-xl xl:max-w-2xl">
-        <Contact darkMode={darkMode} showedArea={showedArea} />
+      <div className="px-6 mb-40 sm:mb-32 w-screen relative">
+        <div className="bg-gradient bg-gradient-4 fadeIn delay-5"></div>
+        <div className="m-auto max-w-sm sm:max-w-xl xl:max-w-2xl">
+          <Contact darkMode={darkMode} showedArea={showedArea} />
+        </div>
       </div>
       {/* FOOTER */}
       <Footer />

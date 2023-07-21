@@ -17,9 +17,12 @@ const AnimationSequence = ({
   const elRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (elRef.current.getBoundingClientRect().top - showedArea[1] < 0)
+    if (
+      elRef.current.getBoundingClientRect().top - showedArea[1] < 0 &&
+      !animationState
+    )
       setAnimationState(true);
-  }, [showedArea]);
+  }, [showedArea, animationState]);
 
   return (
     <div

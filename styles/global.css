@@ -173,14 +173,6 @@ li::marker {
   opacity: 0;
 }
 
-/* .gradient-container {
-  opacity: 1;
-} */
-
-.gradient-container > div {
-  display: block !important;
-}
-
 .fadeIn {
   animation-name: fadeIn;
   animation-duration: 0.75s;
@@ -391,7 +383,7 @@ li::marker {
 }
 
 .bg-gradient {
-  filter: blur(calc(calc(50vh + 50vw) / 6));
+  filter: blur(calc(calc(50vh + 50vw) / 7.5));
   border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
   position: absolute;
   z-index: 0;
@@ -399,42 +391,45 @@ li::marker {
 }
 
 .dark * .bg-gradient {
-  width: 15vw;
-  height: 100vh;
 }
 
 @media (min-width: 640px) {
   .dark * .bg-gradient {
-    filter: blur(calc(calc(50vh + 50vw) / 4.5)) !important;
-    width: 35vw;
-    height: 100vh;
+    filter: blur(calc(calc(50vh + 50vw) / 8.5)) !important;
   }
 }
 
 .dark * .bg-gradient-1 {
-  background-image: linear-gradient(to right, #a8c0ff, #3f2b96);
-  right: -15vw;
-  bottom: -65vh;
-  transform: rotate(65deg);
+  background-image: linear-gradient(to right, #4ca1af, #3f2b96);
+  width: 70vw;
+  height: 20vh;
+  top: 5vh;
+  right: 15vw;
+  /* transform: rotate(deg); */
 }
 
 .dark * .bg-gradient-2 {
-  background-image: linear-gradient(to right, #3f2b96, #4ca1af);
-  top: 10vh;
-  left: -15vw;
-  transform: rotate(-65deg);
+  background-image: linear-gradient(to right, #3f2b96, #4b6cb7);
+  max-width: 800px;
+  width: 30vw;
+  height: 50vh;
+  top: 25%;
+  right: 40vw;
+  /* transform: rotate(-65deg); */
 }
 
 .dark * .bg-gradient-3 {
-  background-image: linear-gradient(to right, #3f2b96, #a8c0ff);
-  right: -15vw;
-  top: 25vh;
-  transform: rotate(65deg);
+  width: 30vw;
+  height: 100vh;
+  top: 25%;
+  right: 35vw;
+  /* transform: rotate(65deg); */
 }
 
 .dark * .bg-gradient-4 {
-  background-image: linear-gradient(to right, #4ca1af, #3f2b96);
+  background-image: linear-gradient(to right, #3f2b96, #4ca1af);
+  width: 70vw;
+  height: 20vh;
   top: 10vh;
-  left: -15vw;
-  transform: rotate(-65deg);
+  right: 15vw;
 }
