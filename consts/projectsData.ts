@@ -3,7 +3,7 @@ export const projectsData = [
     title: "Escala",
     date: "2023",
     description:
-      "Website for a Mexican consulting company, implementing 8+ pages, a blog & a contact/register form. Amplify Studio & SendGrid",
+      "Website for a Mexican business specialized in SAP optimization, implemented 8+ pages, Amplify Studio & SendGrid",
     tags: ["SvelteKit", "Tailwind", "SEO", "Amplify"],
     gallery: [
       "/img/escala/page4.webp",
@@ -19,7 +19,7 @@ export const projectsData = [
     title: "Adroit Overseas",
     date: "2023",
     description:
-      "Website of an International agri processing and distribution company implementing 14+ pages.",
+      "Website of an International agri processing and distribution company, implemented 14+ pages.",
     tags: ["SvelteKit", "Tailwind", "SEO"],
     gallery: [
       "/img/adroit/page1.webp",
@@ -33,8 +33,7 @@ export const projectsData = [
   {
     title: "Grid Software",
     date: "2022",
-    description:
-      "Landing page of a Mexican software consulting company. It has four sections designed by myself.",
+    description: "Landing page of a Mexican software business.",
     tags: ["Next.js", "Tailwind", "SEO"],
     gallery: [
       "/img/grid/grid1.png",
@@ -48,7 +47,7 @@ export const projectsData = [
     title: "Integreat",
     date: "2021",
     description:
-      "Website of an European consulting company. Manage internazionalization to 6 languages. 14+ pages.",
+      "Website of an European business specialized in Odoo consulting. Translation to 6 languages. 14+ pages.",
     tags: ["Angular 11", "Material", "i18n"],
     gallery: [
       "/img/integreat/erpsolutions-min.webp",
@@ -59,10 +58,10 @@ export const projectsData = [
     url: "https://integreat.com/en/home",
   },
   {
-    title: "Aleate",
+    title: "Aleate (old v2)",
     date: "2019",
     description:
-      "Landing page of a Mexican software company. Stunning space environment in 3D. Vanilla javascript. Customrouter.",
+      "Landing page of a Mexican software company. Stunning space environment in 3D. Vanilla javascript.",
     tags: ["Three.js", "HTML", "CSS", "JS"],
     gallery: [
       "/img/aleate/aleate1-min.webp",
@@ -70,7 +69,7 @@ export const projectsData = [
       "/img/aleate/aleate3-min.webp",
     ],
     githubLink: "",
-    url: "https://www.aleate.com/",
+    url: "https://retro.aleate.com/",
   },
   {
     title: "Adroit ERP",

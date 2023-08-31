@@ -74,7 +74,7 @@ function HomePage({ darkMode, showedArea, scrollY }) {
 
       {/* About section */}
       <div className="px-6 mb-20 sm:mb-32 w-screen relative">
-        <div className="fadeIn delay-5 bg-gradient bg-gradient-1"></div>
+        <div className="bg-gradient bg-gradient-1"></div>
         <div className="m-auto max-w-sm sm:max-w-xl xl:max-w-2xl">
           <About darkMode={darkMode} showedArea={showedArea} />
         </div>
@@ -82,7 +82,7 @@ function HomePage({ darkMode, showedArea, scrollY }) {
 
       {/* Experience section */}
       <div className="px-6 mb-10 sm:mb-32 w-screen relative">
-        <div className="bg-gradient bg-gradient-2 fadeIn delay-5"></div>
+        <div className="bg-gradient bg-gradient-2 "></div>
         <div className="m-auto max-w-sm sm:max-w-xl xl:max-w-2xl">
           <Experience darkMode={darkMode} showedArea={showedArea} />
         </div>
@@ -90,7 +90,7 @@ function HomePage({ darkMode, showedArea, scrollY }) {
 
       {/* Work section */}
       <div className="px-6 mb-10 sm:mb-32 w-screen relative">
-        <div className="bg-gradient bg-gradient-3 fadeIn delay-5"></div>
+        <div className="bg-gradient bg-gradient-3 "></div>
         <div className="m-auto max-w-sm sm:max-w-xl xl:max-w-2xl">
           <Work darkMode={darkMode} showedArea={showedArea} />
         </div>
@@ -98,7 +98,7 @@ function HomePage({ darkMode, showedArea, scrollY }) {
 
       {/* Contact section */}
       <div className="px-6 mb-40 sm:mb-32 w-screen relative">
-        <div className="bg-gradient bg-gradient-4 fadeIn delay-5"></div>
+        <div className="bg-gradient bg-gradient-4 "></div>
         <div className="m-auto max-w-sm sm:max-w-xl xl:max-w-2xl">
           <Contact darkMode={darkMode} showedArea={showedArea} />
         </div>

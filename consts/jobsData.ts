@@ -8,11 +8,11 @@ export const JobsData = [
     },
     time: "Apr 2022 — Present",
     description:
-      "Worked as a remote developer in a team managed from Ukraine using SCRUM methodology.",
+      "Currently working for Luxoft, an international consulting company.",
     projects: [
       {
         title: "Network of Giving",
-        details: `currently working with argodesing a UI/UX specialized firm, modernizing old web apps, developing and implementing new features for the Network of Giving organization.`,
+        details: `worked with argodesing a UI/UX specialized firm, modernized, developed and implemented new features of two old web apps for the Network of Giving organization.`,
         tags: ["Angular 15", "PrimeNG", "PrimeFlex"],
       },
       {
@@ -155,33 +155,33 @@ export const JobsData = [
       "I have worked in some freelance projects, participating mainly as frontend web developeproject.",
     projects: [
       {
-        title: "Escala Consulting website",
+        title: "Escala website",
         details: `developed the
-        website of a Mexican consulting company specialized in SAP 
-        implementing 8+ pages.`,
+        website of a Mexican business specialized in SAP optimization,
+        implemented 8+ pages, Amplify Studio & SendGrid.`,
         externalRef: "https://www.escalaconsulting.com.mx/",
         tags: ["SvelteKit", "Tailwind", "SEO"],
       },
       {
         title: "Adroit Overseas website",
         details: `developed the
-        website of an International agri processing and distribution company implementing 14+ pages.`,
+        website of an International agri processing and distribution company, implemented 14+ pages.`,
         externalRef: "https://adroitoverseas.com/",
         tags: ["SvelteKit", "Tailwind", "SEO"],
       },
       {
         title: "Grid Software landing page",
         details: `developed the
-        landing page of a Mexican software development company.`,
+        landing page of a Mexican software business.`,
         externalRef: "https://www.gridcompany.com.mx/",
         tags: ["Next.js", "Tailwind", "SEO"],
       },
       {
-        title: "Integreat Consulting website",
+        title: "Integreat website",
         details: `developed the
-        website of an European consulting company,
-        implementing 15+ pages and
-        internationalization to manage 6 languages`,
+        website of a business specialized in Odoo consulting located in Europe,
+        implemented 14+ pages and
+        internationalization to 6 different languages`,
         externalRef: "https://integreat.com/en/home",
         tags: ["Angular 11", "Material", "i18n"],
       },
