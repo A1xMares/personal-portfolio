@@ -1,6 +1,6 @@
 export const JobsData = [
   {
-    position: "Web dev",
+    position: "Software dev",
     place: {
       name: "Luxoft",
       url: "https://www.luxoft.com/",
@@ -28,7 +28,7 @@ export const JobsData = [
     ]
   },
   {
-    position: "Web dev",
+    position: "Frontend dev",
     place: {
       name: "Woonkly",
       url: "https://woonkly.com/",
@@ -53,7 +53,7 @@ export const JobsData = [
     ]
   },
   {
-    position: "Web dev",
+    position: "Software dev",
     place: {
       name: "Bosch",
       url: "https://www.bosch.com/",
@@ -85,7 +85,7 @@ export const JobsData = [
     ]
   },
   {
-    position: "Web dev",
+    position: "Frontend dev",
     place: {
       name: "Adroit",
       url: "https://adroitoverseas.com/",
@@ -109,7 +109,7 @@ export const JobsData = [
     ]
   },
   {
-    position: "Web dev",
+    position: "Frontend dev",
     place: {
       name: "Aleate",
       url: "https://www.aleate.com/",
@@ -125,7 +125,7 @@ export const JobsData = [
         1st version of the Aleate website
         implementing an interactive 3D environment.`,
         tags: ["JS · HTML · CSS", "SEO", "Three.js"],
-        externalRef: "https://www.aleate.com/"
+        externalRef: "https://retro.aleate.com/"
       },
       {
         title: "Adroit Overseas's internal CRM",

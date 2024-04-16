@@ -1,7 +1,7 @@
 import { ChevronDownIcon } from "@heroicons/react/solid";
 import {
   ArrowNarrowRightIcon,
-  ArrowNarrowLeftIcon,
+  ArrowNarrowLeftIcon
 } from "@heroicons/react/solid";
 import Link from "next/link";
 import { useState } from "react";
@@ -27,7 +27,7 @@ const Experience = ({ darkMode, showedArea }) => {
           <Subtitle
             showedArea={showedArea}
             preffix={"02."}
-            text={"Experience"}
+            text={"Work experience"}
           />
         </AnimationSequence>
       </div>
@@ -47,7 +47,7 @@ const Experience = ({ darkMode, showedArea }) => {
                   {/* JOB HEADER */}
                   <button
                     onClick={() => handleSelected(index)}
-                    className={`${selected === index ? 'mb-4' : 'mb-6'}`}
+                    className={`${selected === index ? "mb-4" : "mb-6"}`}
                   >
                     <h3
                       className={` cursor-pointer flex text-2xl ${
@@ -72,7 +72,9 @@ const Experience = ({ darkMode, showedArea }) => {
                           target="_blank"
                           rel="noreferrer"
                           aria-label={job.place.label}
-                          className={`underline font-bold hover:!text-blue-600 ml-2 font- ${darkMode ? 'text-gray-100' : 'text-slate-600'}`}
+                          className={`underline font-bold hover:!text-blue-600 ml-2 font- ${
+                            darkMode ? "text-gray-100" : "text-slate-600"
+                          }`}
                         >
                           {job.place.name}
                         </a>

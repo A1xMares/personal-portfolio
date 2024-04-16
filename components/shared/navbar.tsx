@@ -48,7 +48,7 @@ const Navbar = ({
             </Link>
             <Link href="#experience" passHref aria-label="Experience section">
               <h2 className="text-lg font-bold cursor-pointer ml-6">
-                <span className="accent-1 text-sm">02. </span>Experience
+                <span className="accent-1 text-sm">02. </span>Work experience
               </h2>
             </Link>
             <Link href="#work" passHref aria-label="Work section">
@@ -112,7 +112,7 @@ const Navbar = ({
               className="text-4xl font-bold cursor-pointer mt-8 fadeInBottom delay-3"
               onClick={() => setMobileMenu(false)}
             >
-              <span className="accent-1 text-2xl">02. </span>Experience
+              <span className="accent-1 text-2xl">02. </span>Work experience
             </h2>
           </Link>
           <Link href="#work" passHref aria-label="Work section">
@@ -128,7 +128,7 @@ const Navbar = ({
               className="text-4xl font-bold cursor-pointer mt-8 fadeInBottom delay-5"
               onClick={() => setMobileMenu(false)}
             >
-              <span className="accent-1 text-2xl">04. </span>Contact me
+              <span className="accent-1 text-2xl">04. </span>Contact
             </h2>
           </Link>
           <a

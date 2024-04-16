@@ -46,7 +46,7 @@ const About = ({ darkMode, showedArea }) => {
           {/* Tabs content */}
           <div
             className={`relative transition-all duration-500 ${
-              selectedTab === 0 ? "h-128 sm:h-72" : "h-108 sm:h-56"
+              selectedTab === 0 ? "h-96 sm:h-72" : "h-108 sm:h-56"
             }  lg:h-96 xl:h-96`}
           >
             {/* Tab 0 (Profile content) */}
@@ -79,10 +79,10 @@ const About = ({ darkMode, showedArea }) => {
                 selectedTab === 1 ? "fadeInRight delay-2 z-10" : "fadeOutRight"
               }`}
             >
-              <div className="sm:flex sm:flex-wrap sm:justify-between">
+              <div className="sm:flex sm:flex-wrap sm:justify-start gap-10 lg:gap-0">
                 {/* Frontend list */}
                 <div className="">
-                  <h4 className="font-bold text-xl">Frontend:</h4>
+                  <h4 className="font-bold text-lg">Frontend</h4>
                   <div className="flex items-top mt-2">
                     <ul className="arrow-list pl-5 w-36 sm:w-32 lg:w-36 xl:w-48">
                       <li>
@@ -95,13 +95,13 @@ const About = ({ darkMode, showedArea }) => {
                         <p className="text-base"> TypeScript </p>
                       </li>
                       <li>
-                        <p className="text-base"> Es / RxJS </p>
-                      </li>
-                      <li>
-                        <p className="text-base"> Bootstrap </p>
+                        <p className="text-base"> RxJS </p>
                       </li>
                       <li>
                         <p className="text-base"> Tailwind </p>
+                      </li>
+                      <li>
+                        <p className="text-base"> Three.js </p>
                       </li>
                     </ul>
                     <ul className="arrow-list pl-5 ml-6 sm:ml-2 lg:ml-6 xl:ml-8">
@@ -118,17 +118,17 @@ const About = ({ darkMode, showedArea }) => {
                         <p className="text-base"> SvelteKit </p>
                       </li>
                       <li>
-                        <p className="text-base"> jQuery </p>
+                        <p className="text-base"> Astro</p>
                       </li>
                       <li>
-                        <p className="text-base"> Three.js </p>
+                        <p className="text-base"> jQuery </p>
                       </li>
                     </ul>
                   </div>
                 </div>
                 {/* Backend list */}
                 <div className=" mt-4 sm:mt-0 lg:mt-4">
-                  <h4 className="font-bold text-xl">Backend & Arch:</h4>
+                  <h4 className="font-bold text-lg">Backend</h4>
                   <div className="flex items-top mt-2">
                     <ul className="arrow-list pl-5 w-36 sm:w-32 lg:w-36 xl:w-48">
                       <li>
@@ -141,21 +141,18 @@ const About = ({ darkMode, showedArea }) => {
                         <p className="text-base"> Express.js </p>
                       </li>
                       <li>
-                        <p className="text-base"> AWS Platform </p>
+                        <p className="text-base"> Nest.js </p>
                       </li>
                     </ul>
                     <ul className="arrow-list pl-5 ml-6 sm:ml-2 lg:ml-6 xl:ml-8">
                       <li>
-                        <p className="text-base"> MongoDB </p>
+                        <p className="text-base"> GraphQL </p>
                       </li>
                       <li>
-                        <p className="text-base"> SQL query </p>
+                        <p className="text-base"> SQL </p>
                       </li>
                       <li>
-                        <p className="text-base"> NgInx </p>
-                      </li>
-                      <li>
-                        <p className="text-base"> Git </p>
+                        <p className="text-base"> TypeORM</p>
                       </li>
                     </ul>
                   </div>

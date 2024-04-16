@@ -8,7 +8,7 @@ const githubWhite = "/svgs/github-white.svg";
 
 const Intro = ({ darkMode }) => {
   return (
-    <section className="grow" id="home">
+    <section className="grow pt-20 md:pt-0" id="home">
       {/* Introduction */}
       <h1
         className={`accent-1 text-3xl md:text-2xl mb-6 md:mb-1 fadeInBottom delay-1 ${
@@ -64,7 +64,7 @@ const Intro = ({ darkMode }) => {
         </a>
         {/* Scroll indicator */}
         <Link href="#about" passHref aria-label="About section">
-          <div className="absolute left-0 right-0 flex justify-center -bottom-40 cursor-pointer">
+          <div className="absolute left-0 right-0 flex justify-center -bottom-28 lg:-bottom-40 cursor-pointer">
             <ChevronDownIcon
               className={`h-14 transition-opacity opacity-60 animate-bounce p-2 ${
                 darkMode ? "text-white" : "text-black"
