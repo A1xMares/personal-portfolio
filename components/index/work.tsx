@@ -12,7 +12,7 @@ const Work = ({ darkMode, showedArea }) => {
           <Subtitle
             showedArea={showedArea}
             preffix={"03."}
-            text={"Work I've done"}
+            text={"Latest projects"}
           />
         </AnimationSequence>
       </div>

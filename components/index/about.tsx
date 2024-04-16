@@ -56,7 +56,7 @@ const About = ({ darkMode, showedArea }) => {
               }`}
             >
               <AnimationSequence showedArea={showedArea}>
-                <p className="mb-4 text-justify">
+                <p className="mb-4 ">
                   I always knew that I wanted to work on tech. My story starts
                   at the age of 15 when I wrote my first piece of code in the
                   programming language &quot;Pascal&quot; and from there I only
@@ -64,7 +64,7 @@ const About = ({ darkMode, showedArea }) => {
                 </p>
               </AnimationSequence>
               <AnimationSequence showedArea={showedArea}>
-                <p className="mb-4 text-justify">
+                <p className="mb-4 ">
                   After 5 years of professional experience I&apos;ve built web
                   apps for corporate IT, asset management, specific business
                   tools, ERPs, CRMs and landing pages having experience working
@@ -182,7 +182,7 @@ const About = ({ darkMode, showedArea }) => {
           <div className="w-100 flex justify-center mr-4 lg:mr-0 mt-4 lg:ml-9">
             <AnimationSequence showedArea={showedArea}>
               <a
-                href="https://drive.google.com/file/d/1P9dwGfbDdXJ3vIHFzcAgFNAGPdQ7eNji/view"
+                href="/resume.pdf"
                 target="_blank"
                 rel="noreferrer"
                 aria-label="Resume link"

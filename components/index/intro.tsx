@@ -28,12 +28,12 @@ const Intro = ({ darkMode }) => {
         <Link href="#work" passHref aria-label="Work section">
           <div>
             <BtnPrimary darkMode={darkMode} className="">
-              Check out my work
+              Latest projects
             </BtnPrimary>
           </div>
         </Link>
         <a
-          href="https://www.linkedin.com/in/alejandro-mares/"
+          href="https://www.linkedin.com/in/alxmares/"
           target="_blank"
           aria-label="Go to linkedin"
           rel="noreferrer"

@@ -1,7 +1,7 @@
 import {
   ExternalLinkIcon,
   ChevronLeftIcon,
-  ChevronRightIcon,
+  ChevronRightIcon
 } from "@heroicons/react/solid";
 import { useState } from "react";
 
@@ -26,12 +26,12 @@ const Card = ({ darkMode, project }) => {
   return (
     <div
       className={`transition-all card-height w-full rounded-2xl border hover:shadow-md overflow-hidden flex flex-col ${
-        darkMode ? "dark-back-op " : "bg-gray-100 border-gray-200"
+        darkMode ? "dark-back-op " : "bg-gray-200 border-gray-300"
       }`}
     >
       {/* Image Galley */}
       <div
-        className={`h-48 sm:h-36 xl:h-44 relative ${
+        className={`h-48 sm:h-40 md:h-44 xl:h-52 relative ${
           darkMode ? "bg-gray-800" : "bg-gray-200"
         }`}
       >

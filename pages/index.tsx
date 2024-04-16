@@ -67,15 +67,23 @@ function HomePage({ darkMode, showedArea, scrollY }) {
 
       {/* Intro component */}
       <div className="px-6 h-screen w-screen md:pb-20 flex items-center relative">
-        <div className="max-w-sm sm:max-w-xl xl:max-w-2xl m-auto w-full pb-20">
+        <div className="max-w-md sm:max-w-2xl xl:max-w-3xl m-auto w-full pb-20 relative z-10">
           <Intro darkMode={darkMode} />
+        </div>
+
+        <div className="lines flex justify-around z-0">
+          <div className="line"></div>
+          <div className="line"></div>
+          <div className="line"></div>
+          <div className="line"></div>
+          <div className="line"></div>
         </div>
       </div>
 
       {/* About section */}
       <div className="px-6 mb-20 sm:mb-32 w-screen relative">
         <div className="bg-gradient bg-gradient-1"></div>
-        <div className="m-auto max-w-sm sm:max-w-xl xl:max-w-2xl">
+        <div className="m-auto max-w-md sm:max-w-2xl xl:max-w-3xl">
           <About darkMode={darkMode} showedArea={showedArea} />
         </div>
       </div>
@@ -83,7 +91,7 @@ function HomePage({ darkMode, showedArea, scrollY }) {
       {/* Experience section */}
       <div className="px-6 mb-10 sm:mb-32 w-screen relative">
         <div className="bg-gradient bg-gradient-2 "></div>
-        <div className="m-auto max-w-sm sm:max-w-xl xl:max-w-2xl">
+        <div className="m-auto max-w-md sm:max-w-2xl xl:max-w-3xl">
           <Experience darkMode={darkMode} showedArea={showedArea} />
         </div>
       </div>
@@ -91,7 +99,7 @@ function HomePage({ darkMode, showedArea, scrollY }) {
       {/* Work section */}
       <div className="px-6 mb-10 sm:mb-32 w-screen relative">
         <div className="bg-gradient bg-gradient-3 "></div>
-        <div className="m-auto max-w-sm sm:max-w-xl xl:max-w-2xl">
+        <div className="m-auto max-w-md sm:max-w-2xl xl:max-w-3xl">
           <Work darkMode={darkMode} showedArea={showedArea} />
         </div>
       </div>
@@ -99,7 +107,7 @@ function HomePage({ darkMode, showedArea, scrollY }) {
       {/* Contact section */}
       <div className="px-6 mb-40 sm:mb-32 w-screen relative">
         <div className="bg-gradient bg-gradient-4 "></div>
-        <div className="m-auto max-w-sm sm:max-w-xl xl:max-w-2xl">
+        <div className="m-auto max-w-md sm:max-w-2xl xl:max-w-3xl">
           <Contact darkMode={darkMode} showedArea={showedArea} />
         </div>
       </div>

@@ -9,7 +9,7 @@ const Navbar = ({
   scrollY,
   windowHeight,
   mobileMenu,
-  setMobileMenu,
+  setMobileMenu
 }) => {
   const [navbarFixed, setNavbarFixed] = useState(false);
 
@@ -53,7 +53,7 @@ const Navbar = ({
             </Link>
             <Link href="#work" passHref aria-label="Work section">
               <h2 className="text-lg font-bold cursor-pointer ml-6">
-                <span className="accent-1 text-sm">03. </span>My work
+                <span className="accent-1 text-sm">03. </span>Latest projects
               </h2>
             </Link>
             <Link href="#contact" passHref aria-label="Contact section">
@@ -99,33 +99,48 @@ const Navbar = ({
         } ${mobileMenu ? "flex" : "hidden"}`}
       >
         <div className="items-center mt-32 ml-8 sm:ml-20">
-          <Link href="#about" passHref aria-label="About section" >
-            <h2 className="text-4xl font-bold cursor-pointer fadeInBottom delay-2" onClick={() => setMobileMenu(false)}>
+          <Link href="#about" passHref aria-label="About section">
+            <h2
+              className="text-4xl font-bold cursor-pointer fadeInBottom delay-2"
+              onClick={() => setMobileMenu(false)}
+            >
               <span className="accent-1 text-2xl">01. </span>About
             </h2>
           </Link>
           <Link href="#experience" passHref aria-label="Experience section">
-            <h2 className="text-4xl font-bold cursor-pointer mt-8 fadeInBottom delay-3" onClick={() => setMobileMenu(false)}>
+            <h2
+              className="text-4xl font-bold cursor-pointer mt-8 fadeInBottom delay-3"
+              onClick={() => setMobileMenu(false)}
+            >
               <span className="accent-1 text-2xl">02. </span>Experience
             </h2>
           </Link>
           <Link href="#work" passHref aria-label="Work section">
-            <h2 className="text-4xl font-bold cursor-pointer mt-8 fadeInBottom delay-4" onClick={() => setMobileMenu(false)}>
-              <span className="accent-1 text-2xl">03. </span>My work
+            <h2
+              className="text-4xl font-bold cursor-pointer mt-8 fadeInBottom delay-4"
+              onClick={() => setMobileMenu(false)}
+            >
+              <span className="accent-1 text-2xl">03. </span>Latest projects
             </h2>
           </Link>
           <Link href="#contact" passHref aria-label="Contact section">
-            <h2 className="text-4xl font-bold cursor-pointer mt-8 fadeInBottom delay-5" onClick={() => setMobileMenu(false)}>
+            <h2
+              className="text-4xl font-bold cursor-pointer mt-8 fadeInBottom delay-5"
+              onClick={() => setMobileMenu(false)}
+            >
               <span className="accent-1 text-2xl">04. </span>Contact me
             </h2>
           </Link>
           <a
-            href="https://drive.google.com/file/d/1P9dwGfbDdXJ3vIHFzcAgFNAGPdQ7eNji/view"
+            href="/resume.pdf"
             target="_blank"
             rel="noreferrer"
             aria-label="Resume link"
           >
-            <BtnPrimary darkMode={darkMode} className="w-60 mt-10 fadeInBottom delay-6">
+            <BtnPrimary
+              darkMode={darkMode}
+              className="w-60 mt-10 fadeInBottom delay-6"
+            >
               Resume
             </BtnPrimary>
           </a>

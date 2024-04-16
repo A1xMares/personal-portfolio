@@ -428,3 +428,86 @@ li::marker {
   top: 10vh;
   right: 15vw;
 }
+
+.lines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 66vh;
+  height: auto;
+  margin: auto;
+  width: 90vw;
+  -webkit-mask-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(rgba(0, 0, 0, 1)),
+    to(rgba(0, 0, 0, 0))
+  );
+}
+
+.line {
+  width: 1px;
+  height: 100%;
+  top: 0;
+  background: rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  position: relative;
+}
+
+.dark * .line {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.line::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 9vh;
+  width: 1px;
+  top: -50%;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0) 0%,
+    #3e497a 75%,
+    #3e497a 100%
+  );
+  animation: drop 5s 0s infinite;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+}
+
+.dark * .line::after {
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0) 0%,
+    #d2aad4 75%,
+    #d2aad4 100%
+  );
+}
+
+.line:nth-child(1)::after {
+  animation-delay: 1s;
+}
+
+.line:nth-child(2)::after {
+  animation-delay: 3s;
+}
+
+.line:nth-child(4)::after {
+  animation-delay: 4s;
+}
+
+.line:nth-child(5)::after {
+  animation-delay: 2s;
+}
+
+@keyframes drop {
+  0% {
+    top: -50%;
+  }
+  100% {
+    top: 110%;
+  }
+}

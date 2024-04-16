@@ -19,8 +19,8 @@ const schemaWebsite = {
   potentialAction: {
     "@type": "SearchAction",
     target: "{search_term_string}",
-    "query-input": "required name=search_term_string",
-  },
+    "query-input": "required name=search_term_string"
+  }
 };
 
 const schemaPerson = {
@@ -31,10 +31,10 @@ const schemaPerson = {
   image: "https://www.alxmares.com/img/profile-min.webp",
   sameAs: [
     "https://twitter.com/Alxmres/",
-    "https://www.linkedin.com/in/alejandro-mares/",
-    "https://github.com/A1xMares",
+    "https://www.linkedin.com/in/alxmares/",
+    "https://github.com/A1xMares"
   ],
-  jobTitle: "Web Developer",
+  jobTitle: "Web Developer"
 };
 
 const Layout = ({
@@ -42,7 +42,7 @@ const Layout = ({
   darkMode,
   toggleDarkMode,
   scrollY,
-  windowHeight,
+  windowHeight
 }: Props) => {
   const [mobileMenu, setMobileMenu] = useState(false);
 
