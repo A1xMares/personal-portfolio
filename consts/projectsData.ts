@@ -4,7 +4,7 @@ export const projectsData = [
     date: "2024",
     description:
       "Agriculture-focused Software as a Service, which optimizes productivity and help to manage specifc processes and operations.",
-    tags: ["Astro", "Next.js", "Tailwind", "SEO"],
+    tags: ["Next.js", "Nest.js", "GraphQL", "TypeORM"],
     gallery: [
       "/img/agave/agave-one.webp",
       "/img/agave/agave-two.webp",
