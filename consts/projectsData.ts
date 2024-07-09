@@ -1,5 +1,22 @@
 export const projectsData = [
   {
+    title: "MACA website",
+    date: "2024",
+    description:
+      "Comprehensive website for Grupo Maca, focusing on showcasing their machinery and safety training consultancy services.",
+    tags: ["Astro", "Tailwind", "SEO"],
+    gallery: [
+      "/img/maca/home.webp",
+      "/img/maca/about.webp",
+      "/img/maca/courses.webp",
+      "/img/maca/course.webp",
+      "/img/maca/consulting.webp",
+      "/img/maca/contact.webp"
+    ],
+    githubLink: "",
+    url: "https://grupomaca.com/"
+  },
+  {
     title: "BLOOM SaaS platform",
     date: "2024",
     description:
@@ -91,21 +108,21 @@ export const projectsData = [
     ],
     githubLink: "",
     url: "https://www.gridcompany.com.mx/"
-  },
-  {
-    title: "Integreat",
-    date: "2021",
-    description:
-      "Website of an European firm specialized in Odoo consulting. Translation to 6 languages. 14+ pages.",
-    tags: ["Angular 11", "Material", "i18n"],
-    gallery: [
-      "/img/integreat/erpsolutions-min.webp",
-      "/img/integreat/whyus-min.webp",
-      "/img/integreat/footer-min.webp"
-    ],
-    githubLink: "",
-    url: "https://integreat.com/en/home"
   }
+  // {
+  //   title: "Integreat",
+  //   date: "2021",
+  //   description:
+  //     "Website of an European firm specialized in Odoo consulting. Translation to 6 languages. 14+ pages.",
+  //   tags: ["Angular 11", "Material", "i18n"],
+  //   gallery: [
+  //     "/img/integreat/erpsolutions-min.webp",
+  //     "/img/integreat/whyus-min.webp",
+  //     "/img/integreat/footer-min.webp"
+  //   ],
+  //   githubLink: "",
+  //   url: "https://integreat.com/en/home"
+  // }
   // {
   //   title: "Aleate (retro)",
   //   date: "2019",
