@@ -57,19 +57,21 @@ const About = ({ darkMode, showedArea }) => {
             >
               <AnimationSequence showedArea={showedArea}>
                 <p className="mb-4 ">
-                  I always knew that I wanted to work on tech. My story starts
-                  at the age of 15 when I wrote my first piece of code in the
-                  programming language &quot;Pascal&quot; and from there I only
-                  kept learning until became a professional developer.
+                  I am a Software Engineer with 8 years of experience building
+                  web applications and frontend platforms. I have worked across
+                  enterprise applications, product development, legacy
+                  modernization and high-traffic web platforms, growing toward
+                  frontend architecture and platform engineering.
                 </p>
               </AnimationSequence>
               <AnimationSequence showedArea={showedArea}>
                 <p className="mb-4 ">
-                  After 5 years of professional experience I&apos;ve built web
-                  apps for corporate IT, asset management, specific business
-                  tools, ERPs, CRMs and landing pages having experience working
-                  in startups and large corporations participating in
-                  international remote teams.
+                  My experience includes React, Next.js, TypeScript, Angular and
+                  Node.js, as well as micro-frontends, reusable component
+                  libraries, design systems, performance optimization and
+                  web-to-mobile experiences. Recently, I have focused on
+                  AI-powered search experiences and shared frontend systems used
+                  across multiple applications.
                 </p>
               </AnimationSequence>
             </div>
